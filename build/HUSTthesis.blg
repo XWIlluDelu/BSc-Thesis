@@ -1,0 +1,113 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: HUSTthesis.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: doc/introduction.aux
+Reallocating 'name_of_file' (item size: 1) to 18 items.
+A level-1 auxiliary file: doc/chapter_1.aux
+Reallocating 'name_of_file' (item size: 1) to 18 items.
+A level-1 auxiliary file: doc/chapter_2.aux
+Reallocating 'name_of_file' (item size: 1) to 18 items.
+A level-1 auxiliary file: doc/chapter_3.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: unsrt.bst
+Reallocating 'name_of_file' (item size: 1) to 11 items.
+Database file #1: HUSTthesis.bib
+Warning--entry type for "Ergodicity_and_mixing" isn't style-file defined
+--line 63 of file HUSTthesis.bib
+Warning--empty author in Kuzmin
+Warning--empty journal in Kuzmin
+Warning--empty year in Kuzmin
+Warning--empty author in Iosifescu
+Warning--empty journal in Iosifescu
+Warning--empty year in Iosifescu
+Warning--empty author in Levy
+Warning--empty journal in Levy
+Warning--empty year in Levy
+Warning--empty author in Liu_Peng
+Warning--empty journal in Liu_Peng
+Warning--empty year in Liu_Peng
+Warning--empty author in The_long_history
+Warning--empty journal in The_long_history
+Warning--empty year in The_long_history
+Warning--empty author in Gauss-Kuzmin_type
+Warning--empty journal in Gauss-Kuzmin_type
+Warning--empty year in Gauss-Kuzmin_type
+Warning--empty author in Zhang_Xian
+Warning--empty journal in Zhang_Xian
+Warning--empty year in Zhang_Xian
+Warning--empty author in Random_variables
+Warning--empty journal in Random_variables
+Warning--empty year in Random_variables
+Warning--empty author in Dimensional_theory
+Warning--empty journal in Dimensional_theory
+Warning--empty year in Dimensional_theory
+Warning--empty author in Zhang_Mengjie
+Warning--empty journal in Zhang_Mengjie
+Warning--empty year in Zhang_Mengjie
+Warning--empty author in Xie_Shenghan
+Warning--empty journal in Xie_Shenghan
+Warning--empty year in Xie_Shenghan
+Warning--empty author in Geng_Xianjin
+Warning--empty journal in Geng_Xianjin
+Warning--empty year in Geng_Xianjin
+Warning--empty author in Khinchin
+Warning--empty journal in Khinchin
+Warning--empty year in Khinchin
+Warning--empty author in Ergodic_Sun
+Warning--empty journal in Ergodic_Sun
+Warning--empty year in Ergodic_Sun
+Warning--empty author in Ergodic_theory
+Warning--empty journal in Ergodic_theory
+Warning--empty year in Ergodic_theory
+Warning--empty author in Mixing_lemma
+Warning--empty journal in Mixing_lemma
+Warning--empty year in Mixing_lemma
+Warning--empty author in Partial_quotients
+Warning--empty journal in Partial_quotients
+Warning--empty year in Partial_quotients
+Warning--empty author in Mixing
+Warning--empty journal in Mixing
+Warning--empty year in Mixing
+You've used 19 entries,
+            1791 wiz_defined-function locations,
+            505 strings with 6027 characters,
+and the built_in function-call counts, 1983 in all, are:
+= -- 113
+> -- 19
+< -- 0
++ -- 19
+- -- 0
+* -- 164
+:= -- 215
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 19
+chr.to.int$ -- 0
+cite$ -- 73
+duplicate$ -- 149
+empty$ -- 271
+format.name$ -- 0
+if$ -- 421
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 18
+newline$ -- 60
+num.names$ -- 0
+pop$ -- 132
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 79
+stack$ -- 0
+substring$ -- 0
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 54
+while$ -- 0
+width$ -- 21
+write$ -- 97
+(There were 55 warnings)

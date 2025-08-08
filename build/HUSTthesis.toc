@@ -1,0 +1,19 @@
+\contentsline {section}{摘要}{I}{section*.1}%
+\contentsline {section}{Abstract}{II}{section*.2}%
+\contentsline {section}{\numberline {1}绪论}{1}{section.1}%
+\contentsline {section}{\numberline {2}连分数简介}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}连分数的定义与收敛性}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}连分数度量理论简介}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}连分数与Gauss变换}{10}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}部分商序列的性质}{13}{subsection.2.4}%
+\contentsline {section}{\numberline {3}连分数动力系统的$\psi $-混合性}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}保测系统简介}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}混合性简介}{18}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Kuzmin 定理}{19}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}连分数动力系统的混合性}{21}{subsection.3.4}%
+\contentsline {section}{\numberline {4}连分数动力系统的遍历性}{27}{section.4}%
+\contentsline {subsection}{\numberline {4.1}遍历性简介}{27}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}连分数动力系统的遍历性}{28}{subsection.4.2}%
+\contentsline {section}{致谢}{31}{section*.3}%
+\contentsline {section}{参考文献}{32}{section*.4}%
+\contentsfinish 
