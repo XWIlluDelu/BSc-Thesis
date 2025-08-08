@@ -1,0 +1,331 @@
+\section{连分数简介}
+\subsection{连分数的定义与收敛性}
+
+\textbf{定义 2.1.1.  }
+将连分数展式(\ref{definition})简记为
+$$[a_0;a_1,a_2,\cdots,a_n,\cdots],$$
+并称$a_1,a_2,\cdots$为它的部分商.\par
+\par
+其中,部分商$a_1,a_2,\cdots$可以取在实数域$\mathbb{R}$,复数域$\mathbb{C}$等数域,甚至一些抽象的函数空间中. $a_0$为整数, $a_1,a_2,\cdots$均为正整数的一类连分数有重要的研究意义,我们称其为正规连分数.在本文中,我们主要研究正规连分数.不过,为得到连分数收敛性的一个判定定理,我们先仅仅限制部分商为正的.\par
+一个连分数称为有限的,若其只有有限多个部分商;称为无限的,若其有无穷多个部分商.\par
+\textbf{定义 2.1.2.  }
+连分数的$n$阶收敛因子为
+$$\frac{p_n}{q_n}=[a_0;a_1,a_2,\cdots,a_n].$$
+\par
+考虑收敛因子与部分商的关系,由于$n$阶收敛因子是前$n$个部分商及$a_0$进行有理运算的结果,所以它是前$n$个部分商及$a_0$的有理函数,即
+$$\frac{p_n}{q_n}=\frac{P(a_0,a_1,\cdots ,a_n)}{Q(a_0,a_1,\cdots ,a_n)}.$$\par
+上式也给出了有限连分数的值.而对无限连分数,我们需要考虑它的收敛性,为此,对收敛因子的研究是重要的.\par
+\textbf{命题 2.1.1.  }\textsuperscript{\cite{Khinchin}}
+$\forall k\geqslant2$都有
+    \begin{equation}\label{rfc}
+        \begin{aligned}
+        p_k=a_kp_{k-1}+p_{k-2},\\
+        q_k=a_kq_{k-1}+q_{k-2}.
+        \end{aligned}
+    \end{equation}
+若我们约定$p_{-1}=1,q_{-1}=0$则\textbf{命题 2.1.1}还将对$k=1$成立.
+\par
+\textbf{证明:  }
+我们将采用归纳的方式证明, $k=2$时可以直接验证,下设该命题对$k<n$都成立.\par
+记$[a_1;a_2,\cdots,a_n]$的$r$阶收敛因子为$[a_1;a_2,\ldots,a_r]=\dfrac{p_r^{'}}{q_r^{'}},$则
+$$[a_0;a_1,\cdots,a_n]=a_0+\dfrac{q_{n-1}^{'}}{p_{n-1}^{'}}.$$
+即有
+    \begin{align*}
+    p_n&=a_0p'_{n-1}+q'_{n-1},\\
+    q_n&=p'_{n-1}.
+    \end{align*}
+\par
+将归纳假设用于$[a_1;a_2,\cdots,a_n]$的收敛因子,有
+    \begin{align*}
+    p'_{n-1}=a_np'_{n-2}+p'_{n-3},\\
+    q'_{n-1}=a_nq'_{n-2}+q'_{n-3},
+    \end{align*}
+从而有
+    \begin{align*}
+    p_n&=a_0(a_np'_{n-2}+p'_{n-3})+(a_nq'_{n-2}+q'_{n-3}) \\
+    &=a_n(a_0p'_{n-2}+q'_{n-2})+(a_0p'_{n-3}+q'_{n-3}) \\
+    &=a_np_{n-1}+p_{n-2},\\
+    q_n&=a_np'_{n-2}+p'_{n-3}=a_nq_{n-1}+q_{n-2}.
+    \end{align*}
+由归纳法知命题得证.\qed
+\par
+\textbf{推论 2.1.2.  }\textsuperscript{\cite{Khinchin}}
+$\forall k\geqslant 1$,都有
+$$q_kp_{k-1}-p_kq_{k-1}=(-1)^k.$$
+或写为
+$$\frac{p_{k-1}}{q_{k-1}}-\frac{p_k}{q_k}=\frac{(-1)^k}{q_kq_{k-1}}.$$
+\par
+\textbf{推论 2.1.3.  }\textsuperscript{\cite{Khinchin}}
+$\forall k\geqslant2$,都有
+$$q_kp_{k-2}-p_kq_{k-2}={(-1)}^{k-1}a_k.$$
+或写为
+$$\frac{p_{k-2}}{q_{k-2}}-\frac{p_k}{q_k}=\frac{(-1)^{k-1}a_k}{q_kq_{k-2}}.$$
+\par
+根据\textbf{推论  2.1.2},\textbf{推论  2.1.3},我们不难得到:\par
+\textbf{推论 2.1.4.  }\textsuperscript{\cite{Khinchin}}
+偶数阶收敛因子单调递增,奇数阶收敛因子单调递减,且所有偶数项收敛因子都小于奇数项收敛因子.
+\par
+\textbf{命题 2.1.5.  }\textsuperscript{\cite{Khinchin}}\textbf{(连分数收敛性的判定定理).  }
+无限连分数$[a_0;a_1,a_2,\cdots,a_n,\cdots]$收敛的充分必要条件是级数
+\begin{equation}\label{series}
+\sum_{n=1}^{\infty}a_n
+\end{equation}
+发散.
+\par
+\textbf{证明:  }
+由\textbf{推论 2.1.4}可以知道, $[a_0;a_1,a_2,\cdots,a_n,\cdots]$的奇、偶数项收敛因子都是收敛的.故$[a_0;a_1,a_2,\cdots,a_n,\cdots]$收敛等价于其奇、偶数项收敛因子收敛于同一极限.根据(\ref{rfc}),知道这又等价于
+$$\lim_{k\to\infty}{q_kq_{k+1}}=+\infty.$$\par
+\textbf{必要性: }假设(\ref{series})收敛,由(\ref{rfc})可知
+$$q_k>q_{k-2},\quad \forall k\geqslant 2.$$
+因此, $q_k>q_{k-1}$和$q_{k-1}>q_{k-2}$至少有一个成立.\par
+若前者成立,则由(\ref{rfc}),有
+$$q_k=a_kq_{k-1}+q_{k-2}<a_kq_k+q_{k-2}.$$
+由级数的收敛性知,存在正整数$k_0$,使得$\forall k\geqslant k_0$,都有$a_k<1$,从而
+$$q_k<\frac{q_{k-2}}{1-a_k}.$$\par
+若后者成立,则
+$$q_k=a_kq_{k-1}+q_{k-2}<(1+a_k)q_{k-1}<\frac{q_{k-1}}{1-a_k}.$$\par
+故无论如何,对足够大的$k$总存在$l<k$,使得
+$q_k<\dfrac{1}{1-a_k}q_l.$
+我们重复这样的步骤,得到
+$$q_k<\frac{q_s}{\left(1-a_k\right)\left(1-a_{k_1}\right)\ldots\left(1-a_{k_m}\right)},$$
+其中$k>k_1>\cdots>k_m\geqslant k_0>s$.然而,由于(\ref{series})收敛,故无穷乘积
+$$\prod_{n=k_0}^{\infty}\left(1-a_n\right)$$
+有确定的正值,记为$\xi$,并且显然有
+\begin{equation}\label{repeated}
+(1-a_k)(1-a_{k_1})\cdots(1-a_{k_m})\geqslant \prod_{n=k_0}^{\infty}(1-a_n)=\lambda.   
+\end{equation}
+我们再记$q_0,q_1,\cdots,q_{k_0-1}$中最大的为$M$.
+由(\ref{repeated})可知, $\forall k\geqslant k_0$,有
+$$q_k<\frac{M}{\xi},$$
+从而
+$$q_{k+1}q_k<\frac{M^2}{\lambda^2}<\infty.$$
+这就证明了连分数的收敛.\par
+\textbf{充分性: }假设(\ref{series})发散.记$q_0,q_1$中较小的为$m>0$.由$q_k>q_{k-2},\forall k\geqslant2$,可知总有$q_k>m$.因而
+$$q_k\geqslant q_{k-2}+ma_k,\quad \forall k\geqslant 2,$$
+从而
+\begin{align*}
+q_{2k} &\geqslant q_0+c\sum_{n=1}^k a_{2n},\\
+q_{2k+1} &\geqslant q_1+c\sum_{n=1}^k a_{2n+1}.
+\end{align*}
+上面两式相加可得
+$$q_{2k}+q_{2k+1}>q_{0}+q_{1}+c\sum_{i=1}^{2k+1}a_{n},$$
+也就是说
+$$q_k+q_{k-1}>c\sum\limits_{n=1}^k a_n.$$
+又由均值不等式可知
+$$q_{k}q_{k-1}>\frac{c^{2}}{2}\sum_{n=1}^{k}a_{n}.$$
+结合级数(\ref{series})的发散,说明了连分数的收敛.\qed
+\par
+\textbf{推论 2.1.6.  }\textsuperscript{\cite{Khinchin}}
+正规无限连分数总是收敛的.
+\par
+在本文的以下内容中,我们只考虑正规连分数,并简称为连分数.称无限连分数的极限值为连分数的值.\par
+不难验证,有限连分数$[a_0;a_1,a_2,\cdots,a_k,1]=[a_0;a_1,a_2,\cdots,a_k+1]$,因此我们可以将最后一个部分商为$1$的有限连分数排除在我们考虑的范围之外.在现在的讨论范围内,我们有以下的重要定理.\par
+\textbf{命题 2.1.7.  }\textsuperscript{\cite{Khinchin}}
+$\forall x\in \mathbb{R}$,都有唯一的一个连分数的值等于$x$,并且该连分数是无限的当且仅当$x$是无理的.
+\par
+我们将不对这个定理进行证明,实际上,在介绍了Gauss映射$\tau$之后,实数与连分数的对应关系就被建立起来了.\par
+在最后,我们对收敛因子$\dfrac{p_k}{q_k}$中分母$q_k$的大小进行估计.\par
+\textbf{命题 2.1.8.  }\textsuperscript{\cite{Khinchin}}
+$\forall k\geqslant 1$,都有
+$$q_{k}\geqslant2^{\frac{k-1}{2}}.$$
+\par
+\textbf{证明:  }
+由(\ref{rfc}),可知
+$$q_k=a_k q_{k-1}+q_{k-2}\geqslant q_{k-1}+q_{k-2}\geqslant2q_{k-2}.$$
+并且$q_0=1,q_1=a_1\geqslant 1$,可知命题成立.\qed
+\par
+结合(\ref{rfc}),可以得到下面估计
+\begin{equation}\label{klength}
+\left|\frac{p_n}{q_n}-\frac{p_n+p_{n-1}}{q_n+q_{n-1}}\right|=\frac{1}{q_n(q_n+q_{n-1})}\leqslant\frac{1}{2^{n-1}}.
+\end{equation}
+这个式子在以后会用到.
+\subsection{连分数度量理论简介}
+在介绍连分数的度量理论之前,我们先不加证明地指出下面的四个结论.\par
+\textbf{命题 2.2.1.  }\textsuperscript{\cite{Khinchin}}
+对任意的正函数$\varphi(q)$,总存在无理数$\alpha$使得不等式
+$$\left|\alpha-\frac{p}{q}\right|<\varphi\left(q\right)$$
+对无穷多对整数$(p,q),q>0$成立.
+\par
+\textbf{命题 2.2.2.  }\textsuperscript{\cite{Khinchin}}
+记无理数$\alpha$的连分数表示为$[a_0;a_1,a_2,\cdots,a_n,\cdots]$.若$\{a_n\}_{n\in \mathbb{N}}$有界,则存在足够小的$c>0$,使得不等式
+$$\left|a-\frac{p}{q}\right|<\frac{c}{q^2}$$
+对任意整数对$(p,q),q>0$都不成立.\par
+反过来,若$\{a_n\}_{n\in \mathbb{N}}$无界,则存在无穷多的整数对$(p,q),q>0$使得上面的不等式成立.
+\par
+\textbf{命题 2.2.3.  }\textsuperscript{\cite{Khinchin}}\textbf{(Liouville定理).   }
+对$n$阶无理代数数$\alpha$,存在正数$C$使得对任意整数对$(p,q),q>0$,都成立不等式
+$$\left|\alpha-\frac{p}{q}\right|>\frac{C}{q^n}.$$
+\par
+(其中, $\alpha$是$n$阶代数数指的是它满足一个$n$阶整系数多项式方程,而不满足任何$k<n$阶整系数多项式方程.不是代数数的数称为超越数.)\par
+关于超越数,作为Liouville定理的推论,有\par
+\textbf{推论 2.2.4.  }\textsuperscript{\cite{Khinchin}}
+若对任意$C>0$与任意的正整数$n$,都存在整数对$(p,q),q>0$使得
+$$\left|\alpha-\frac pq\right|\leqslant\frac C{q^n},$$
+则$\alpha$是超越数.
+\par
+根据\textbf{命题 2.2.2}与\textbf{命题 2.2.3},我们还可以知道:任意的二阶实代数数,其连分数表示中的全体部分商有界.\par
+从以上命题不难发现,实数的许多算术性质同其连分数表示形式有比较紧密的联系.于是可以提出一个自然的问题:对于一个具体性质而言,满足性质的和不满足性质的数,那些更“普遍”?为解决这样的问题,需要建立连分数的度量理论.\par
+$\forall x \in\mathbb{R}$, $x$存在唯一的连分数表示
+$$x=[a_0;a_1,a_2,\dots],$$
+从而,也建立起了部分商作为实数$x$的函数$a_n(x)=a_n$.
+对于有理数$x$,它被表示为有限连分数,在这里,对于尚没有定义的$a_n(x)$,可以定义$a_n(x)=\infty$.但如果只考虑关于度量的性质的话,可以忽略$x$为有理数的情况,因为在Lebesgue测度$\lambda$和Gauss测度$\gamma$考虑的度量意义下,有理数是零测的.\par
+为使所考虑的测度是有限的,可以通过限定$x\in[0,1)$,此时$a_0(x)=0.$\par
+先考虑$n=1,2$的简单情况,这位我们认识一般的$a_n(x)$有很大作用.\par
+由定义,
+$$a_1(x)=k\iff k\leqslant x<k+1\iff \frac{1}{k+1}<x\leqslant\frac{1}{k}.$$
+故可以根据$a_1(x)$的值将$[0,1)$划分为一些区间
+$$[\frac{1}{k+1},\frac{1}{k}),\quad k\in \mathbb{N^{+}}.$$
+这些区间都是某个一阶柱集.\par
+同样地,
+$$a_2=l\iff\exists k,a_1=k,a_2=l\iff\exists k,\dfrac{1}{k+\frac{1}{l}}\leqslant x<\dfrac{1}{k}+\frac{1}{l+1}.$$
+故可以根据$a_2(x)$将一阶柱集$[\frac{1}{k+1},\frac{1}{k})$划分为一些区间
+$$[\dfrac{1}{k+\frac{1}{l}},\dfrac{1}{k+\frac{1}{l+1}}),\quad l\in \mathbb{N^{+}}.$$
+这些区间都是某个二阶柱集.\par
+总的来说, $a_{k}(x)$将一个$k-1$阶柱集划分为可数个$k$阶柱集,在每个$k$阶柱集上, $a_{k}(x)$有恒定的值.并且当$k$为奇数时, $a_k(x)$在每个柱集上的值,从右到左递增;当$k$为偶数时, $a_k(x)$在每个柱集上的值,从左到右递增.并且有下面的定量关系:\par
+\textbf{命题 2.2.5.  }\textsuperscript{\cite{Khinchin}}
+给定一组正整数$(i_1,i_2,\cdots,i_k)$,它定义了一个$k$阶柱集,其端点为由$(a_1=i_1,a_2=i_2,\cdots,a_k=i_k)$所决定的
+$$\frac{p_k+p_{k-1}}{q_k+q_{k-1}}\quad\text{和}\quad\frac{p_k}{q_k}.$$
+\par
+对一般的$E=\{x\in [0,1)|a_{n_1}=i_1,a_{n_2}=i_2,\cdots,a_{n_k}=i_k\}$,有递推关系:
+\begin{align*}
+\sum_{i_{\ell}=1}^{\infty}&\{x\in [0,1)|a_{n_1}=i_1,\cdots,a_{n_{\ell-1}}=i_{\ell-1},a_{n_{\ell}}=i_{\ell},a_{n_{\ell+1}}=i_{\ell+1},\cdots,a_{n_k}=i_k\}\\
+&=\{x\in [0,1)|a_{n_1}=i_1,\cdots,a_{n_{\ell-1}}=i_{\ell-1},a_{n_{\ell+1}}=i_{\ell+1},\cdots,a_{n_k}=i_k\}
+\end{align*}
+成立,其中对集合的$\sum$表示集合的无交并.\par
+为呼应本节开头的内容,并举例说明连分数的度量性质在研究连分数的算数性质上的重要性,我们不加证明地介绍下面的两个性质并结束这一节.\par
+\textbf{命题 2.2.6.  }\textsuperscript{\cite{Khinchin}}
+在连分数表示下,部分商$\{a_n\}_{n\in \mathbb{N}}$有界的点集是一个Lebesgue零测集.
+\par
+\par
+\textbf{命题 2.2.7.  }\textsuperscript{\cite{Khinchin}}
+设$f$是定义在正半轴上的连续函数,且$xf(x)$不递增,则当积分
+$$
+\int\limits_{c}^{\infty}f\left(x\right)dx
+$$
+对某个正数$c$发散时,不等式
+$$\left|\alpha-\frac{p}{q}\right|<\frac{f(q)}{q}$$
+对几乎处处的$\alpha$,有无穷多的整数对对$(p,q),q>0$成立.
+\par
+
+\subsection{连分数与Gauss变换}
+在这一节中,我们将定义Gauss变换$\tau$和Gauss测度$\gamma$.\par
+\textbf{定义 2.3.1.  }
+记$I=[0,1)$, $\mathcal{B}_I$为$I$的Borel $\sigma$代数,定义Gauss变换$\tau:I\to I:$
+$$
+\tau\left(x\right)=\left\{
+\begin{array}{cc}
+x^{-1}-\left\lfloor x^{-1}\right\rfloor&\text{当}x\neq0,\\
+0&\text{当}x=0.\end{array}\right.
+$$
+\par
+可以知道, $I$中实数和其连分数部分商的关系为
+$$a_1=a_1(x)=\lfloor1/x\rfloor,\quad a_n=a_n(x)=\lfloor1/\tau^{n-1}(x)\rfloor,$$
+以及
+\begin{equation}\label{tauandinquo}
+a_n\left(x\right)=a_1\left(\tau^{n-1}\left(x\right)\right).
+\end{equation}
+(其中,定义$a_1(0)=\infty$.)\par
+历史上, Gauss问题是连分数度量理论中第一个问题,其内容是:估计误差
+$$m_n(x)-\frac{\ln(1+x)}{\ln{2}}$$
+其中, $m_n(x)=\lambda({u\in[0,1)\mid\tau^n(u)\leqslant x})$, $\lambda$为Lebesgue测度.这个问题促使了Gauss测度的诞生.\par
+\textbf{定义 2.3.2.  }
+Gauss测度$\gamma:\mathcal{B}_I\to[0,1]:$
+$$\gamma\left(A\right)=\frac{1}{\ln2}\int_A\frac{\mathrm{d}x}{x+1},\quad A\in\mathcal{B}_I.$$
+\par
+下面给出Gauss测度与Lebesgue测度的两个性质.\par
+\textbf{命题 2.3.1.  }\textsuperscript{\cite{Iosifescu}}
+Gauss变换$\tau$是保Gauss测度$\gamma$的而不保持Lebesgue测度$\lambda$.
+\par
+\textbf{证明:  }
+前半部分,即证
+\begin{equation}\label{Gausspreserved}
+\gamma\left(\tau^{-1}(A)\right)=\gamma(A),\quad \forall A\in\mathcal{B}_I.
+\end{equation}
+这里只对$A=[0,u)$验证(\ref{Gausspreserved}).至于从$A=[0,u)$的情况过渡到$\forall A\in\mathcal{B}_I$的情况,之后会进行介绍.\par
+考虑$A$
+在Gauss变换之逆$\tau^{-1}$下的原像,有
+$$\tau^{-1}\left([0,u)\right)=\bigcup_{i\in\mathbf{N}_+}\left(\frac{1}{u+i},\frac{1}{i}\right],$$
+故(\ref{Gausspreserved})即
+$$\int_0^u\frac{\mathrm{d}x}{x+1}=\sum\limits_{i\in\mathbf{N}_+}\int_{1/(u+i)}^{1/i}\frac{\mathrm{d}x}{x+1}.$$
+上式直接积分可验证是成立的.
+\par
+后半部分,为证Gauss变换$\tau$不保持Lebesgue测度$\lambda$,只需找到一个反例,取$A=(\dfrac{1}{2},1)$,有
+$$
+\begin{aligned}
+\lambda\left(\tau^{-1}\left(A\right)\right)& =\sum_{i\in\mathbf{N}_{+}}\left(\frac{1}{i+1/2}-\frac{1}{i+1}\right)=2\sum_{i\in\mathbf{N}_{+}}\left(\frac{1}{2i+1}-\frac{1}{2i+2}\right)  \\
+&=2\left(\log2-1+\frac12\right)=2\log2-1.
+\end{aligned}
+$$
+而
+$$\lambda(A)=\frac{1}{2}\neq2\log2-1=\lambda\left(\tau^{-1}\left(A\right)\right).$$
+这就完成了证明.\qed
+\par
+\textbf{命题 2.3.2.  }\textsuperscript{\cite{Liu_Peng}}
+Gauss测度$\gamma$和Lebesgue测度$\lambda$等价.
+\par
+\textbf{证明:  }
+由于
+$$\frac{1}{2\ln2}\leqslant \frac{1}{(\ln2)(x+1)}\leqslant \frac{1}{\ln2},\quad \forall x\in I.$$
+故$\forall A\in \mathcal{B_I}$
+$$\frac{\lambda(A)}{2\ln2}=\int_A \frac{1}{2\ln2}\mathrm{d}x\leqslant \int_A\frac{1}{(\ln2)(x+1)}\mathrm{d}x=\gamma(A)\leqslant \int_A\frac{1}{\ln2}\mathrm{d}x=\frac{\lambda(A)}{\ln2}.$$
+所以两个测度等价.\qed
+\par
+作为本节的末尾,我们介绍由Gauss变换$\tau$启发的另一个变换$\bar{\tau}:\Omega^2\to\Omega^2,$
+$$\bar{\tau}\left(\omega,\theta\right)=\left(\tau\left(\omega\right),\frac{1}{a_1\left(\omega\right)+\theta}\right),$$
+其中$\Omega=[0,1]\setminus\mathbb{Q}$.
+它是一个双射(注意到$\tau$不是,如$\tau(\dfrac{2}{3})=\tau(\dfrac{2}{5})=\dfrac{1}{2}$),其逆为
+$$\bar{\tau}^{-1}\left(\omega,\theta\right)=\left(\frac{1}{a_1\left(\theta\right)+\omega},\tau\left(\theta\right)\right),$$
+并且有
+$$\bar{\tau}^{n}\left(\omega,\theta\right)=\left(\tau^{n}\left(\omega\right),\left[a_{n}\left(\omega\right),\cdots,a_{2}\left(\omega\right),a_{1}\left(\omega\right)+\theta\right]\right),$$
+和
+$$\bar{\tau}^{-n}\left(\omega,\theta\right)=\left([a_{n}\left(\theta\right),\cdots,a_{2}\left(\theta\right),a_{1}\left(\theta\right)+\omega],\tau^{n}\left(\theta\right)\right).$$\par
+除了可逆外, $\bar\tau$的另一个优点是, (与$\tau$的情况下定义$\{a_{n}\}_{n\in\mathbb{N}}$类似)我们可以定义$\{\bar{a}_{\ell}\}_{\ell\in\mathbb{Z}}$,为
+$$\bar{a}_{\ell+1}\left(\omega,\theta\right)=\bar{a}_1\left(\bar{\tau}^\ell\left(\omega,\theta\right)\right).$$
+两者之间的关系是
+\begin{equation}\label{taubartauan}
+\bar{a}_{0}\left(\omega,\theta\right)=a_{1}\left(\theta\right),\bar{a}_{n}\left(\omega,\theta\right)=a_{n}\left(\omega\right),\bar{a}_{-n}\left(\omega,\theta\right)=a_{n+1}\left(\theta\right),\forall n\in\mathbb{N}.
+\end{equation}
+这一点在之后会用到.\par
+$\bar\tau$也引出一种Gauss测度$\bar\gamma:\mathcal{B}_{\Omega^2}\to[0,1]$
+$$\bar{\gamma}(A)=\frac{1}{\log2}\iint_A\frac{\mathrm{d}x\mathrm{d}y}{\left(xy+1\right)^2}.$$
+与$\gamma$的关系是
+$$\bar{\gamma}(A\times I) = \bar{\gamma}(I\times A) = \gamma(A)$$
+并且也有与\textbf{命题 2.3.2.}类似的结论.\par
+\textbf{命题 2.3.3.  }\textsuperscript{\cite{Iosifescu}}
+$\bar\tau$是保$\bar\gamma$测度的.
+\par
+\subsection{部分商序列的性质}
+在Gauss测度$\gamma$的意义下,连分数部分商序列有以下性质:\par
+\textbf{命题 2.4.1.  }\textsuperscript{\cite{Liu_Peng,Iosifescu}}
+部分商序列是严平稳的,从而是同分布的.
+\par
+\textbf{证明:  }
+由(\ref{tauandinquo})与\textbf{命题 2.3.1}即可证明.\qed
+\par
+\textbf{命题 2.4.2.  }\textsuperscript{\cite{Liu_Peng,Iosifescu}}
+连分数序列可逆,即
+$$a_\ell:m\leqslant\ell\leqslant n\quad \text{和}\quad a_{m+n-\ell}:m\leqslant\ell\leqslant n$$
+同分布.
+\par
+\textbf{证明:  }
+类似\textbf{命题 2.4.1},可以证明对$\bar\tau$,其定义的$\{\bar{a}_n\}_{n\in\mathbb{Z}}$也是严平稳的(在$\bar\gamma$测度下).故
+$${\bar{a}}_\ell:m\leqslant \ell\leqslant n\quad \text{和}\quad {\bar{a}}_{\ell-m-n+1}:m\leqslant \ell\leqslant n$$
+同分布.\par
+结合(\ref{taubartauan})知,
+$$a_\ell:m\leqslant\ell\leqslant n\quad \text{和}\quad a_{m+n-\ell}:m\leqslant\ell\leqslant n$$
+同分布.\qed
+\par
+\textbf{命题 2.4.3.  }\textsuperscript{\cite{Liu_Peng}}
+连分数部分商序列不独立.
+\par
+\textbf{证明:  }
+只需要举出反例,下面说明$\gamma(a_1=1,a_2=1)\neq\gamma(a_1=1)\gamma(a_2=1)$.\par
+由\textbf{命题 2.3.1.}可知
+$$\gamma(a_1=1,a_2=1)=\frac{1}{\ln2}\int^{\frac{2}{3}}_\frac{1}{2}\frac{1}{1+x}\mathrm{d}x=\frac{1}{\ln2}\ln\frac{10}{9};$$
+$$\gamma(a_1=1)=\frac{1}{\ln2}\int^1_\frac{1}{2}\frac{1}{1+x}\mathrm{d}x=\frac{1}{\ln2}\ln\frac{4}{3};$$
+$$\gamma(a_2=1)=\gamma(a_1=1)=\frac{1}{\ln2}\ln\frac{4}{3}.$$
+最后一个式子是因为部分商序列同分布.\par
+从而$\gamma(a_1=1,a_2=1)\neq\gamma(a_1=1)\gamma(a_2=1)$,连分数部分商序列不独立.\qed
+
+
+\sectionbreak

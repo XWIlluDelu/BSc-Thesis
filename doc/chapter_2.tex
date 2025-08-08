@@ -1,0 +1,379 @@
+\section{连分数动力系统的$\psi$-混合性}
+
+\subsection{保测系统简介}
+\textbf{定义 3.1.1.  }
+记两个概率空间为$(X_i,\mathcal{B}_i,\mu_i),i=1,2$,映射$T:X_1\to X_2$被称为可测的,若
+$$\forall A_2\in\mathcal{B}_2,\quad \exists A_1\in\mathcal{B}_1,\quad T^{-1}(A_2)=A_1;$$
+被称为保测的,若
+$$\mu_1(T^{-1}(A_2))=\mu_2(A_2).$$
+若变换$T:X\to X$是保测的,则称$(X,\mathcal{B},\mu,T)$为保测系统.
+\par
+下面我们将介绍保测变换的验证方法,以解决\textbf{命题 2.3.1}的证明中所保留的,从$A=[0,u)$的情况过渡到$A\in\mathcal{B}_I$的情况.在此之前,一些准备工作是需要的.\par
+\textbf{定义 3.1.2.  }
+记$X$为一个集合, $\mathcal{S}$是$X$的一个子集类.若有:
+\begin{enumerate}
+    \item $\emptyset\in S$;
+    \item 若$A,B\in S$,则$A\cap B\in S$;
+    \item 若$A\in S$,则$\exists E_i\in \mathcal{S},i=1,2,\cdots,n$使得$X\setminus A=\sum\limits_{i=1}^n E_i$.
+\end{enumerate}
+则称$S$为一个半代数.\par
+\par
+\textbf{定义 3.1.3.  }
+记$X$为一个集合, $\mathcal{S}$是$X$的一个子集类.若有:
+\begin{enumerate}
+    \item $\emptyset\in \mathcal{A}$;
+    \item 若$A,B\in \mathcal{A}$,则$A\cap B\in \mathcal{A}$;
+    \item 若$A\in \mathcal{A}$,则$X\setminus \mathcal{A}\in S$.
+\end{enumerate}
+则称$\mathcal{A}$为一个代数.\par
+\par
+不难验证,代数是半代数, $\sigma$代数是代数.代数的交仍是代数,并且对$X$的任意子集族$\mathcal{G}$, $2^X$是一个包含$\mathcal{G}$的半代数,从而也是代数, $\sigma$代数.\par
+由上面的讨论,可知以下三个子集族的定义是合理的.\par
+\textbf{定义 3.1.4.  }
+\begin{enumerate}
+    \item $\mathcal{A}(\mathcal{S})$为包含半代数$\mathcal{S}$的最小代数,也称由半代数$\mathcal{S}$生成的代数,
+    \item $\mathcal{B}(\mathcal{A})$为包含代数$\mathcal{A}$的最小$\sigma$代数,也称由代数$\mathcal{A}$生成的$\sigma$代数,
+    \item $\mathcal{B}(\mathcal{A}(\mathcal{S}))$称由半代数$\mathcal{S}$生成的$\sigma$代数.
+\end{enumerate}
+\par
+\textbf{定义 3.1.5.  }
+记$X$为一个集合,$\mathcal{C}$是$X$的一个子集类.若有:
+\begin{enumerate}
+    \item $\mathcal{C}$对单调增集合列之并封闭,即
+    $$\text{若}E_{1}\subset E_{2}\subset\cdots,E_{i}\in{\mathcal C}\text{,则}\bigcup_{i=1}^{\infty}E_{i}\in{\mathcal C};$$
+    \item $\mathcal{C}$对单调减集合列之交封闭,即
+    $$\text{若}F_{1}\supset F_{2}\supset\cdots,F_{i}\in{\mathcal C}\text{,则}\bigcap_{i=1}^{\infty}F_{i}\in{\mathcal C}.$$
+\end{enumerate}
+则称$\mathcal{C}$为单调类.
+\par
+不难验证,单调类的交仍是单调类,并且对$X$的任意子集族$\mathcal{G}$, $2^X$是包含$\mathcal{G}$的单调类.\par
+由上面的讨论,可知以下子集族的定义是合理的.\par
+\textbf{定义 3.1.6.  }$\mathcal{C}(\mathcal{G})$为包含$\mathcal{G}$的最小单调类,也称由$\mathcal{G}$生成的单调类.
+\par
+下面将介绍保测变换的一个验证方法,先介绍两个引理:\par
+\textbf{引理 3.1.1.  }\textsuperscript{\cite{Ergodic_Sun,Ergodic_theory}}
+由半代数$\mathcal{S}$生成的代数为:
+\begin{equation}\label{genealge}
+{\mathcal A}({\mathcal S})=\left\{E=\sum\limits_{i=1}^{n}E_{i}|E_{i}\in{\mathcal S},i=1,2,\cdots,n,n\in\mathbb{N^{+}}\right\}.
+\end{equation}
+\par
+\textbf{证明:  }
+先记(\ref{genealge})的右边为$\mathcal{G}$.\par
+首先,根据定义,验证$\mathcal{G}$为一个代数.代数定义的第1条显然成立.\par
+对$\mathcal{G}$中的两个集合
+$$E=\sum\limits_{i=1}^{n}E_{i},E_{i}\in{\mathcal S},i=1,2,\cdots,n,\quad F=\sum\limits_{j=1}^{m}F_{j},F_{j}\in{\mathcal S},j=1,2,\cdots,m,$$
+可知
+$$E\cap F=\bigcup\limits_{(i,j)\in\{1,2,\cdots,n\}\times\{1,2,\cdots,m\}}E_i\cap F_j.$$
+由于$\mathcal{S}$是半代数,故诸$E_i\cap F_j\in\mathcal{S}$.从而$E\cap F\in \mathcal{G}.$即代数定义的第2条成立.\par
+而对
+$$X\setminus E=X\setminus(\sum\limits_{i=1}^n E_i)=\bigcap\limits_{i=1}^n (X\setminus E_i).$$
+由于$E_i \in \mathcal{S}$,且$\mathcal{S}$为半代数,故
+$$X\setminus{E_i}=\sum\limits_{j=1}^{m_i}A_{ij},\quad i=1,2,\cdots,n,j=1,2,\cdots,m_i,$$
+从而$X\setminus E_i\in \mathcal{G}$.又由已经证明的定义中第2条,可知$X\setminus E=\bigcap\limits_{i=1}^n (X\setminus E_i)\in \mathcal{G}$.从而定义中第3条也成立.综上所述, $\mathcal{G}$是一个代数.\par
+进一步地,再证明$\mathcal{G}$是包含$\mathcal{S}$的最小代数.任取包含$\mathcal{S}$的代数$\mathcal{A}$和$E\in \mathcal{G},E=\sum\limits_{i=1}^{n}E_{i},E_{i}\in{\mathcal S}$.由$E_i\in \mathcal{S}\subset \mathcal{A}$,有$X\setminus E_i\in \mathcal{A}$.由$X\setminus E=\bigcap\limits_{i=1}^n (X\setminus E_i)$知$X\setminus E\in \mathcal{A}$.从而
+$$X\setminus (X\setminus E)=E\in\mathcal{A}.$$
+这就证明了$\mathcal{G}\subset\mathcal{A}$,由$\mathcal{A}$的任意性,知$\mathcal{G}$是包含$\mathcal{S}$的最小代数.\qed
+\par
+\textbf{引理 3.1.2.  }\textsuperscript{\cite{Ergodic_Sun,Ergodic_theory}}
+由代数$\mathcal{A}$生成的$\sigma$代数为:
+$$\mathcal{B}(\mathcal{A})=\mathcal{C}(\mathcal{A}).$$
+\par
+\textbf{证明:  }
+我们先证明$\mathcal{C}(\mathcal{A})$对取补运算封闭.记$\mathcal{C}_c(\mathcal{A})$是$\mathcal{C}(\mathcal{A})$的子集,且满足:
+$$\text{若}A\in\mathcal{C}_c(\mathcal{A}),\text{则}A^{c}\in\mathcal{C}_c(\mathcal{A}).$$\par
+由于$\mathcal{A}\subset\mathcal{C}_c(\mathcal{A})$知$\mathcal{C}_c(\mathcal{A})$非空.设$\{E_i\}_{i\in\mathbb{N}^+}$是$\mathcal{C}_c(\mathcal{A})$中的单调增集合列.则$\{(E_i)^{c}\}_{i\in\mathbb{N}}$是$\mathcal{C}_c(\mathcal{A})$中的单调减集合列,自然它们都是$\mathcal{C}(\mathcal{A})$中的单调集合列,故
+$$E=\bigcup_{i=1}^{\infty}E_{i}\in{\mathcal C}\left({\mathcal A}\right),E^c=\bigcap_{i=1}^{\infty}E_{i}^{c}\in{\mathcal C}\left({A}\right).$$
+从而$E\in\mathcal{C}_c(\mathcal{A})$, $\mathcal{C}_c(\mathcal{A})$对单调增集合列之并封闭.\par
+运用相同的办法,可以证明$\mathcal{C}_c(\mathcal{A})$对单调减集合列之交封闭.从而$\mathcal{C}_c(\mathcal{A})$是单调类, $\mathcal{C}(\mathcal{A})\subset\mathcal{C}_c(\mathcal{A})$.故$\mathcal{C}_c(\mathcal{A})=\mathcal{C}(\mathcal{A})$,从而$\mathcal{C}(\mathcal{A})$对取补运算封闭.\par
+再证明$\mathcal{C}(\mathcal{A})$对有限交封闭.任取$F\in\mathcal{C}(\mathcal{A})$.记$\mathcal{C}_F(\mathcal{A})$是$\mathcal{C}(\mathcal{A})$的子集,且满足
+$$\text{若}E\cap F\in\mathcal{C}(\mathcal{A}),\text{则}E\in\mathcal{C}_F(\mathcal{A}).$$\par
+由于$\emptyset\in\mathcal{C}_F(\mathcal{A})$,知$\mathcal{C}_F(\mathcal{A})$非空.设$\{E_i\}_{i\in\mathbb{N}^+}$是$\mathcal{C}(\mathcal{A})$中的单调增集合列.则$\{E_i\cap F\}_{i\in\mathbb{N}^+}$是$\mathcal{C}_F(\mathcal{A})$中的单调增集合列,自然也是$\mathcal{C}(\mathcal{A})$中的单调增集合列,故
+$$E\cap F=\bigcup_{i=1}^{\infty}\left(E_i\cap F\right)\in\mathcal{C}\left(A\right)$$
+从而$E\in\mathcal{C}_F(\mathcal{A})$. $\mathcal{C}_F(\mathcal{A})$对单调增集合列之并封闭.\par
+运用相同的办法,可以证明$\mathcal{C}_F(\mathcal{A})$对单调减集合列之交封闭.从而$\mathcal{C}_F(\mathcal{A})$是单调类, $\mathcal{C}(\mathcal{A})\subset\mathcal{C}_F(\mathcal{A})$.故$\mathcal{C}_F(\mathcal{A})=\mathcal{C}(\mathcal{A})$, $\mathcal{C}$对交$F$封闭.又由$F$的任意性可以证得,$\mathcal{C}(\mathcal{A})$对有限交运算封闭.\par
+故$\mathcal{C}(\mathcal{A})$是代数,对有限的交(并)封闭.又由$\mathcal{C}(\mathcal{A})$是单调类,可知其对无限的交(并)封闭,从而是$\sigma$代数.\qed
+\par
+\textbf{命题 3.1.3.  }\textsuperscript{\cite{Ergodic_Sun,Ergodic_theory}}\textbf{(保测变换的验证方法).  }
+$(X,\mathcal{B},\mu)$为一概率空间, $T:X\to X$为可测变换. $\mathcal{B}$为半代数$\mathcal{S}$生成的$\sigma$代数.若
+$$\mu(T^{-1}(A))=\mu(A),\quad \forall A\in \mathcal{S},$$
+成立,则$T$为保测的.
+\par
+\textbf{证明:  }
+记$\{A_i\}_{i\in\mathbb{N^+}}$中的任意不交集合列,由\textbf{引理 3.1.1}, $\mathcal{A}(\mathcal{S})$中的元素都有$\sum\limits_{i=1}^n A_i$的形式.由于在$\mathcal{S}$上满足$\mu(T^{-1}(A))=\mu(A)$,结合
+$$\mu(T^{-1}(\sum\limits_{i=1}^n A_i))=\mu(\sum\limits_{i=1}^n T^{-1}(A_i))=\sum\limits_{i=1}^n\mu(T^{-1}(A_i))=\sum\limits_{i=1}^n\mu(A_i)=\mu(\sum\limits_{i=1}^n A_i),$$
+知$\mu(T^{-1}(A))=\mu(A)$在$\mathcal{A}(\mathcal{S})$上也成立.\par
+记$\{B_n\}_{n\in\mathbb{N}^+}$是满足$\mu(T^{-1}(B_i))=\mu(B_i)$的单调增集合列,由于
+$$\mu\left(T^{-1}\bigcup_{i=1}^{n}B_{i}\right)=\mu\left(T^{-1}B_{n}\right)=
+\mu\left(B_{n}\right)=\mu\left(\bigcup_{i=1}^{n}B_{i}\right).$$
+并且$\mu\left(\bigcup\limits_{i=1}^{n}B_{i}\right),\mu\left(T^{-1}\bigcup\limits_{i=1}^{n}B_{i}\right)$为单调有界数列,是收敛的,从而
+\begin{align*}
+    \lim_{n\to\infty}\mu\left(\bigcup\limits_{i=1}^{n}B_{i}\right)&= \mu\left(\bigcup\limits_{i=1}^{\infty}B_{i}\right),\\
+    \lim_{n\to\infty}\mu\left(T^{-1}\bigcup\limits_{i=1}^{n}B_{i}\right)&= \mu\left(T^{-1}\bigcup\limits_{i=1}^{\infty}B_{i}\right).\\
+    \mu\left(T^{-1}\bigcup_{i=1}^{\infty}B_{i}\right)&=\mu\left(\bigcup_{i=1}^{\infty}B_{i}\right).
+\end{align*}
+可知满足$\mu(T^{-1}(A))=\mu(A)$的子集类是包含$\mathcal{A}(\mathcal{S})$的单调类.结合\textbf{引理 3.1.2}知,满足$\mu(T^{-1}(A))=\mu(A)$的子集类是$\mathcal{B}(\mathcal{A}(\mathcal{S}))=\mathcal{B}$.\qed
+\par
+凭借\textbf{命题 3.1.3}可以为\textbf{命题 2.3.1}给出完整的证明.
+\subsection{混合性简介}
+\textbf{定义 3.2.1.  }
+若保测系统$(X,\mathcal{B},\mu,T)$满足
+$$\lim_{n\to\infty}{\frac{1}{n}}\sum_{i=0}^{n-1}|\mu(T^{-i}A\cap B)-\mu(A){\mu}(B)|=0$$
+对任意可测集$A,B\in\mathcal{B}$成立,则称该保测系统为弱混合的.
+\par
+\textbf{定义 3.2.2.  }
+若保测系统$(X,\mathcal{B},\mu,T)$满足
+$$\lim\limits_{n\to\infty}\left|\mu(T^{-n}A\cap B)-\mu(A)\mu(B)\right|=0$$
+对任意可测集$A,B\in\mathcal{B}$成立,则称该保测系统为强混合的.
+\par
+记$\{X_k\}_{k\in\mathbb{N^+}}$是定义在概率空间$(X,\mathcal{B},\mu)$上的随机过程,$X_{i}^{j}$为由$X_{\ell},i\leqslant\ell\leqslant j$所生成的$\sigma$代数,其中$i< j,i\in\mathbb{N}^+,j\in\mathbb{N}^+\cup\{\infty\}$.\par
+又记$\mathcal{B}_i\subset\mathcal{B},i=1,2$为两个$\sigma$代数,记
+$$\alpha(\mathcal{B}_1,\mathcal{B}_2)=\sup_{A\in\mathcal{B}_1,B\in\mathcal{B}_2}\left(|\mu(A\cap B)-\mu(A)\mu(B)|\right);$$
+$$\phi(\mathcal{B}_1,\mathcal{B}_2)=\sup_{A\in\mathcal{B}_1,B\in\mathcal{B}_2,\mu(B)>0}\left(|\mu(A|B)-\mu(A)|\right);$$
+$$\psi(\mathcal{B}_1,\mathcal{B}_2)=\sup_{A\in\mathcal{B}_1,B\in\mathcal{B}_2,\mu(A)>0,\mu(B)>0}\left(\left|\frac{\mu(A|B)}{\mu(A)}-1\right|\right).$$
+\par
+\textbf{定义 3.2.3.  }
+若随机过程$\{X_k\}_{k\in\mathbb{N^+}}$是严平稳的,并且
+$$\lim_{n\to\infty}\alpha(X_{1}^{k},X_{k+n}^{\infty})=0,$$
+则称其为$\alpha$-混合的.类似,也可以定义$\phi$-混合、$\psi$-混合.
+\par
+由于
+$$\alpha(\mathcal{A},\mathcal{B})\leqslant\phi(\mathcal{A},\mathcal{B})\leqslant\psi(\mathcal{A},\mathcal{B})$$
+故$\psi$-混合性蕴含$\phi$-混合性蕴含$\alpha$-混合性.
+\subsection{Kuzmin 定理}
+在这一节,我们将证明\textbf{Kuzmin 定理},并由此解决Gauss问题以及为连分数动力系统的混合性证明做铺垫.\par
+\textbf{命题 3.3.1.  }\textsuperscript{\cite{Kuzmin,Khinchin,Iosifescu}}\textbf{(Kuzmin定理).  }
+记$\{f_n\}_{n\in\mathbb{N}}$是定义在$[0,1]$上的一列实函数,并且满足下面三个条件:
+\begin{enumerate}
+    \item 递推条件:
+    \begin{equation}\label{recur}
+        f_{n+1}(x)=\sum\limits_{k=1}^{\infty}\dfrac{1}{(k+x)^{2}}f_{n}\left(\dfrac{1}{k+x}\right);
+    \end{equation}
+    \item 存在正数$M$,使得$0<f_0(x)<M$;
+    \item 存在正数$m$,使得$|f_0'(x)|<m$.
+\end{enumerate}
+则存在取决于$M,m$的正数$A$与正的常数$\lambda$成立
+\begin{equation}\label{Kuzmin}
+f_{n}\left(x\right)=\frac{a}{1+x}+\theta A e^{-\lambda \sqrt{n}},
+\end{equation}
+$$a=\frac{1}{\ln2}\int_{0}^{1}f_{0}(z)d z,\quad|\theta|<1.$$
+\par
+
+该定理的证明较长,在这里我们仅简要叙述主要步骤.先介绍在题设条件下成立的下面四个引理:\par
+\textbf{引理 1.  }\textsuperscript{\cite{Iosifescu}}
+\begin{equation}\label{lemma1}
+f_{n}\left(x\right)=\sum^{\left(n\right)}f_{0}\left(\frac{p_{n}+x p_{n-1}}{q_{n}+x q_{n-1}}\right)\frac{1}{\left(q_{n}+x q_{n-1}\right)^{2}}
+\end{equation}
+对任意$n\geqslant 0$成立.其中, $\dfrac{p_{n}+xp_{n-1}}{q_{n}+xq_{n-1}}$落在以$\dfrac{p_{n}}{q_{n}}$和$\dfrac{p_{n}+p_{n-1}}{q_{n}+q_{n-1}}$为端点的$n$阶柱集内,求和是对所有$n$阶柱集求和.\par
+\par
+\textbf{引理 2.  }\textsuperscript{\cite{Iosifescu}}
+\begin{equation}\label{lemma2}
+\left|f_{n}^{'}(x)\right|<\frac{m}{2^{n-3}}+4M
+\end{equation}
+对任意$n\geqslant0$成立.\par
+\par
+\textbf{引理 3.  }\textsuperscript{\cite{Iosifescu}}
+若
+\begin{equation}\label{lemma3eq1}
+\frac{t}{1+x}<f_{n}(x)<\frac{T}{1+x},
+\end{equation}
+则
+\begin{equation}\label{lemma3eq2}
+\frac{t}{1+x}<f_{n+1}(x)<\frac{T}{1+x},
+\end{equation}
+\par
+\textbf{引理 4.  }\textsuperscript{\cite{Iosifescu}}
+\begin{equation}\label{lemma4}
+\int\limits_{0}^{1}f_{n}(z)dz=\int\limits_{0}^{1}f_{0}(z)dz
+\end{equation}
+对任意$n\geqslant0$成立.\par
+\par
+回到\textbf{Kuzmin定理}的证明,由定理条件容易知道,存在正数$g_0,G_0,m_0=m$使得
+\begin{equation}\label{Kuzmintherom1}
+\frac{g_0}{1+x}<f_0(x)<\frac{G_0}{1+x},\quad|f_0'(x)|<m_0.
+\end{equation}
+之后,将证明,由(\ref{Kuzmintherom1})可以推得,对充分大的$n$,存在正数$g_1,G_1,m_1$使得
+$$\frac{g_1}{1+x}<f_n(x)<\frac{G_1}{1+x},\quad|f_n'(x)|<m_1,$$
+并且若记$\delta=1-\dfrac{\ln2}{2}<1$,还有
+\begin{align*}
+    g_0<g_1<G_1<G_0,\\
+    G_1-g_1<(G_0-g_0)\delta+2^{-n+2}(m_0+G_0).
+\end{align*}
+重复这样的步骤,可以证得,对$r=1,2\cdots$,存在正数$g_r,G_r,m_r$,使得
+\begin{equation}\label{Kuzmintherom2}\begin{aligned}
+&\frac{g_r}{1+x}<f_{rn}(x)<\frac{G_r}{1+x},\quad |f_{rn}^{\prime}(x)|<n_{r}.\\
+&g_{r-1}<g_{r}<G_{r}<G_{r-1},\\
+&G_r-g_r<\delta(G_{r-1}-g_{r-1})+2^{-n+2}(m_{r-1}+G_{r-1}).
+\end{aligned}\end{equation}
+由\textbf{引理 3},可以取$m_r = \dfrac{m}{2^{rn-3}} + 4M$,并且对足够大的$n$,有$m_r<5M$.
+代回(\ref{Kuzmintherom2})可得,存在常数$\lambda>0$,由$M,m$决定的$A_0>0$,使得
+$$G_n-g_n<A_0e^{-\lambda n}.$$
+记$\lim\limits_{n\to\infty}G_n=\lim\limits_{n\to\infty}g_n=a$,即有
+\begin{equation}\label{Kuzmintherom3}
+\Big|f_{n^2}(x)-\frac{a}{1+x}\Big|<A_0 e^{-\lambda n},\quad \lim_{n\to\infty} \int\limits_0^1f_{n^2}(z)dz=a\ln2.
+\end{equation}
+由\textbf{引理 4},可知$a=\dfrac{1}{\ln2}\int_{0}^{1}f_0(z)\mathrm{d}z$.
+由\textbf{引理 3},以及(\ref{Kuzmintherom3}),对足够大的$n$,都有
+$$\frac{a-2A_0 e^{-\lambda\sqrt{n}}}{1+x}<f_{n}(x)<\frac{a+2A_0 e^{-\lambda\sqrt{n}}}{1+x}.$$
+只需要选取足够大的常数$A\geqslant A_0$使得对有限个比较小的$n$使得要证的式子(\ref{Kuzmin})成立即可.\qed
+\par
+\par
+下面我们运用\textbf{Kuzmin 定理}解决Gauss问题:\par
+\textbf{Gauss问题的解}\textsuperscript{\cite{Kuzmin,Khinchin,Iosifescu}}\textbf{:  }
+在\textbf{Kuzmin 定理}中,取$f_n(x)$为$m^{'}_n(x)$.由于$m_0(x)=x,f_0(x)=1,\forall x\in[0,1]$,故条件2、3是成立的.\par
+由于$\tau^{n}(x)=\dfrac{1}{a_{n+1}+\tau^{n+1}(x)}$,从而$\tau^{n+1}(x)\leqslant x$当且仅当存在正整数$k$使得$\dfrac{1}{k+x}\leqslant\tau^{n}(x)\leqslant\dfrac{1}{k}$.从而有
+$$m_{n+1}(x)=\sum_{k=1}^{\infty}m_n\left(\frac{1}{k}\right)-m_n\left(\frac{1}{k+x}\right).$$
+形式上两边同时求导,可知
+$$m_{n+1}^{\prime}(x)=\sum_{k=1}^{\infty}\frac{1}{(k+x)^2}m_n^{\prime}\left(\frac{1}{k+x}\right).$$
+用归纳法可得$m^{'}_n(x)$一致有界,而由$\dfrac{1}{(k+x)^2}$单调趋于零,右边的求和一致收敛,上面式子是真实成立的.从而条件1也成立,从而有
+$$\Big|m_n'(x)-\frac{1}{(1+x)\ln2}\Big|<\theta Ae^{-\lambda \sqrt{n}},$$
+两边积分,得
+$$\Big|m_n(x)-\frac{\ln{(1+x)}}{\ln{2}}\Big|\leqslant\int_0^1\Big|m_n'(x)-\frac{1}{(1+x)\ln2}\Big|\mathrm{d}x<\theta Ae^{-\lambda \sqrt{n}}.$$
+这就为Gauss问题给出了一个解.    
+
+
+\subsection{连分数动力系统的混合性}
+在这一节中,我们用\textbf{Kuzmin 定理}证明连分数动力系统的强混合性,以及连分数部分商序列的$\psi$-混合性,先介绍三个引理.\par
+\textbf{引理 3.4.1.  }\textsuperscript{\cite{Liu_Peng,Mixing_lemma}}
+设$E$为$k$阶柱集$\{x\in I|a_1(x)=i_1,a_2(x)=i_2,\cdots,a_k(x)=i_k\}$.则$\forall F\in\mathcal{B}_I$,有
+\begin{equation}\label{mixinglemma1.1}
+\gamma(E\bigcap \tau^{-n-k}F)=\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}})),\quad 0\leqslant p<1.
+\end{equation}
+\par
+\textbf{证明:  }
+记
+$$F_n(u)=\{x\in I|\tau^{n+k}(x)<u\},$$
+则$\tau^{-n-k}F_n(u)=[0,u).$
+再记
+$$f_n(u)=\dfrac{\gamma(E\cap F_n(u))}{\gamma(E)}.$$
+由于$\tau^{n+k}(x)=\dfrac{1}{a_{n+k+1}+\tau^{n+k+1}(x)}$,有
+\begin{equation}\label{mixinglemma1.2}
+f_{n+1}(u)=\sum_{m=1}^\infty f_{n}\left(\dfrac{1}{m}\right)-f_{n}\left(\dfrac{1}{m+u}\right).
+\end{equation}\par
+由于$E\cap F_0(u)=\{x\in I|a_1(x)=i_1,a_2(x)=i_2,\cdots,a_k(x)=i_k,\tau^{k}(x)<u\},$可知
+$$\gamma(E\cap F_0(u))=(-1)^k\frac{1}{\ln2}\left(\ln\left(1+\frac{p_k+up_{k-1}}{q_k+uq_{k-1}}\right)-\ln\left(1+\frac{p_k}{q_k}\right)\right)$$
+又
+$$\gamma(E)=(-1)^k\frac{1}{\ln2}\left(\ln\left(1+\frac{p_k+p_{k-1}}{q_k+q_{k-1}}\right)-\ln\left(1+\frac{p_n}{q_n}\right)\right)$$
+类似上一节中Gauss问题的处理方式,可以验证
+\begin{enumerate}
+    \item $\{f_n\}_{n\in\mathbb{N}}$满足\textbf{Kuzmin 定理}的条件2、3.
+    \item (\ref{mixinglemma1.2})的两边形式上同时求导后,右边的求和是一致收敛的,从而上面的式子成立.故$\{f_n\}_{n\in\mathbb{N}}$满足\textbf{Kuzmin 定理}的条件 1.
+\end{enumerate}\par
+由\textbf{Kuzmin 定理},可知
+$$|f_n'(u)-\frac{1}{(\ln 2)(1+u)}|\leqslant \theta A e^{-\lambda \sqrt{n}}.$$
+上式两边同时在可测集$F$上积分,可知\\
+\begin{align*}
+    \left|\frac{\gamma(E\cap \tau^{-n-k}F)}{\gamma(E)}-\gamma(F)\right|&=\left|\int_F f_n(u)\mathrm{d}u-\int_F \frac{1}{(\ln 2)(1+u)}\mathrm{d}u\right|\\
+    &\leqslant\int_F\left|f_n'(u)-\frac{1}{(\ln 2)(1+u)}\right|\mathrm{d}u\\
+    &\leqslant\theta A e^{-\lambda\sqrt{n}}\lambda(F)=\gamma(F)O(p^{\sqrt{n}}).
+\end{align*}
+上式最后一个等号用到了Gauss测度$\gamma$和Lebesgue测度$\lambda$的等价性.这也就说明了(\ref{mixinglemma1.1})成立.\qed
+\par
+\textbf{引理 3.4.2. }\textsuperscript{\cite{Liu_Peng,Mixing_lemma}}
+记$\dfrac{p_k}{q_k}<\dfrac{\bar p_k}{\bar q_k}$是两个$k$阶收敛因子.$E=\left(\dfrac{p_k}{q_k},\dfrac{\bar p_k}{\bar q_k}\right)$,则$\forall F\in\mathcal{B}_I$,仍然成立(\ref{mixinglemma1.1}):
+$$\gamma(E\bigcap \tau^{-n-k}F)=\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}})),\quad 0\leqslant p<1.$$
+\par\textbf{证明:  }
+对区间$\left(\dfrac{p_k}{q_k},\dfrac{\bar p_k}{\bar q_k}\right)$,若不考虑在两个端点上的区别,其为至多可数个$k$阶柱集$\{x\in I|a_1(x)=i_1,a_2(x)=i_2,\cdots,a_k(x)=i_k\}$的无交并,记为
+$$E=\left(\dfrac{p_k}{q_k},\dfrac{\bar p_k}{\bar q_k}\right)=\sum\limits_{i=1}^{\infty}E_i.$$
+由\textbf{引理 3.4.1},以及$\sum\limits_{i=1}^{\infty}\gamma(E_i\bigcap\tau^{-n-k}F),\sum\limits_{i=1}^{\infty}\gamma(E_i)$的收敛性,有
+\begin{align*}
+    \gamma(\sum\limits_{i=1}^{\infty}E_i\bigcap\tau^{-n-k}F)&=\sum\limits_{i=1}^{\infty}\gamma(E_i\bigcap\tau^{-n-k}F))\\
+    &=\sum\limits_{i=1}^{\infty}\gamma(E_i)\gamma(F)(1+O(p^{\sqrt{n}}))=\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}})).
+\end{align*}
+这就完成了证明.\qed
+\par
+\textbf{引理 3.4.3.}\textsuperscript{\cite{Liu_Peng,Mixing_lemma}}
+记$E$是$\mathcal{B}_I$中的任意开集,则$\forall F\in\mathcal{B}_I$,成立
+\begin{equation}\label{mixinglemma3.1}
+\gamma(E\cap T^{-n}F)=\gamma(E)\gamma(F)+\gamma(F)O(p^{\sqrt{n}}),\quad 0\leqslant p<1.
+\end{equation}
+\par
+\textbf{证明:  }
+由\textbf{命题 2.1.8}, (\ref{klength})可知,任意$k$阶柱集的测度不超过$\dfrac{1}{2^{k-1}}$.\par
+先考虑$E$为开区间$(a,b)$的情况,将$E=(a,b)$用三个区间覆盖.
+$$E_0=\left(\dfrac{p_k}{q_k},\dfrac{\bar p_k}{\bar q_k}\right)$$
+$$E_1=\left[\dfrac{p_k+p_{k-1}}{q_k+q_{k-1}},\dfrac{p_k}{q_k}\right]k\text{为奇数时,或}\left[\dfrac{p_k}{q_k},\dfrac{p_k+p_{k-1}}{q_k+q_{k-1}}\right]k\text{为偶数时};$$
+$$E_2=\left[\dfrac{\bar p_k+\bar p_{k-1}}{\bar q_k+\bar q_{k-1}},\dfrac{\bar p_k}{\bar q_k}\right]k\text{为奇数时,或}\left[\dfrac{\bar p_k}{\bar q_k},\dfrac{\bar p_k+\bar p_{k-1}}{\bar q_k+\bar q_{k-1}}\right]k\text{为偶数时}.$$
+其中$x\in E_1,y\in E_2$,从而$E=(a,b)\subset(E_1\bigcup E_2\bigcup E_3)$.
+\begin{align*}
+&\left|\gamma(E\cap \tau^{-n}F)-\gamma(E)\gamma(F)\right|\\
+&=\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)+\gamma(E\setminus E_0 \cap \tau^{-n}F)-\gamma(E\setminus E_0)\gamma(F)\right|\\
+&\leqslant\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)\right|+\left|\gamma(E\setminus E_0 \cap \tau^{-n}F)-\gamma(E\setminus E_0)\gamma(F)\right|\\
+&\leqslant\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)\right|+\gamma(F)(\gamma(E_1)+\gamma(E_2)).
+\end{align*}
+取$k=\lfloor \dfrac{n}{2}\rfloor$,由\textbf{引理 3.4.2}得
+\begin{equation}\label{mixinglemma3.2}
+\begin{aligned}
+\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)\right|&\leqslant\left|\gamma(E_0\cap \tau^{-(n-k)-k}(F)-\gamma(E_0)\gamma(F)\right|\\
+&=\gamma(E_0)\gamma(F)(1+O(p^{\sqrt{n-k}}))\\
+&=\gamma(E_0)\gamma(F)(1+O(p^{\sqrt{\frac{n}{2}}})).
+\end{aligned}
+\end{equation}
+注意到,对$0\leqslant p<1$有$0\leqslant p^{\sqrt{\frac{1}{2}}}<1$.故若记$\bar{p}=p^{\sqrt{\frac{1}{2}}}$则有, $O(p^{\sqrt{\frac{n}{2}}})=O(\bar{p}^{\sqrt{n}})$.为使记号简单,仍记(\ref{mixinglemma3.2})中的$O(p^{\sqrt{\frac{n}{2}}})$为$O(p^{\sqrt{n}})$.\par
+由Gauss测度$\gamma$与Lebesgue测度$\lambda$的等价性$$\gamma(E_1)+\gamma(E_2)\leqslant\frac{1}{\ln2}(\lambda(E_1)+\lambda(E_2))=O(\frac{1}{2^{k}}).$$
+并且
+\begin{align*}
+&\left|\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}}))-\gamma(E_0)\gamma(F)(1+O(p^{\sqrt{n}}))\right|\\
+&\leqslant(\gamma(E_1)+\gamma(E_2))\gamma(F)(1+O(p^{\sqrt{n}}))\\
+&=\gamma(F)O(\frac{1}{2^{k}}),
+\end{align*}
+从而有
+$$\left|\gamma(E\cap \tau^{-n}F)-\gamma(E)\gamma(F)\right|\leqslant\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}}))+\gamma(F)O(\frac{1}{2^{k}}).$$
+由$k=\lfloor \dfrac{n}{2}\rfloor$,可知$O(\dfrac{1}{2^{k}})=O(p^{\sqrt{n}})$.\par
+因此, (\ref{mixinglemma1.1})可写为
+$$\gamma(E\cap T^{-n}F)=\gamma(E)\gamma(F)+\gamma(F)O(q^{\sqrt{n}}).$$
+这就完成了$E$为开区间$(a,b)$的情况.\par
+现设$E$为开集,由于其可写为可数个开区间的无交并,故也成立(\ref{mixinglemma3.1}).\qed
+\par
+\textbf{命题 3.4.4.}\textsuperscript{\cite{Liu_Peng,Mixing_lemma}}
+连分数动力系统$(I,\mathcal{B}_I,\tau,\gamma)$是强混合的.
+\par
+
+\textbf{证明:  }
+由于对任意小的$\varepsilon>0$, $\mathcal{B}_I$中的可测集$A,B$,存在开集$E,F$使得$$\lambda(A\Delta E)<\frac{1}{\ln 2}\varepsilon,\quad \lambda(B\Delta F)<\frac{1}{\ln 2}2\varepsilon.$$
+此时有:
+\begin{align*}
+    |\gamma(A\bigcap T^{-n}B)-\gamma(E\bigcap T^{-n}B)|&<\varepsilon,\\
+    |\gamma(E\bigcap T^{-n}B)-\gamma(E\bigcap T^{-n}F)|&<\varepsilon,\\
+    |\gamma(E)\gamma(F)-\gamma(A)\gamma(B)|&<2\varepsilon.
+\end{align*}
+由\textbf{引理 3.4.3},对充分大的$n$有,
+$$|\gamma(E\bigcap T^{-n}F)-\gamma(E)\gamma(F)|<\varepsilon.$$
+从而有
+\begin{align*}
+|\gamma(A\bigcap T^{-n}B)-\gamma(A)\gamma(B)|& \leqslant|\gamma(A\bigcap T^{-n}B)-\gamma(E\bigcap T^{-n}B)|\\
+&+|\gamma(E\bigcap T^{-n}A)-\gamma(E\bigcap T^{-n}F)| \\
+&+|\gamma(E\bigcap T^{-n}B)-\gamma(E)\gamma(F)| \\
+&+|\gamma(E)\gamma(F)-\gamma(A)\gamma(B)|\\
+&<5\varepsilon
+\end{align*}
+这就证明了连分数动力系统的混合性.\qed
+\par
+根据\textbf{命题 3.4.4.}的证明,可以立即得到连分数动力系统部分商序列的$\psi$-混合性.\par
+\textbf{命题 3.4.5.  }\textsuperscript{\cite{Partial_quotients,Mixing}}
+连分数动力系统部分商序列是$\psi$-混合的.
+\par
+\textbf{证明:  }
+由\textbf{命题 2.4.1},部分商序列是严平稳的,故要证明其$\psi$-混合性,只需要证明
+$$\lim_{n\to\infty}\psi(X_{1}^{k},X_{k+n}^{\infty})=0.$$\par
+而本节的\textbf{引理 3.4.1}已经说明, $\forall k\in\mathbb{N^+},\forall E\in X_{1}^{k},\forall F\in \mathcal{B},\gamma(E),\gamma(F)>0$,都有(\ref{mixinglemma1.1})即
+$$\left|\frac{\gamma(E\bigcap \tau^{-n-k}F)}{\gamma(E)\gamma(F)}-1\right|=O(p^{\sqrt{n}}),\quad 0\leqslant p<1.$$
+只需要取$F$使得$F\in X_{1}^{\infty}$,此时$\tau^{-n-k}F\in X_{k+n+1}^{\infty}$,结合$\gamma(\tau^{-n-k}F)=\gamma(F)$即可.\qed
+\par
+由连分数动力系统的混合性,我们可以证明连分数部分商序列的渐进独立性.\par
+\textbf{命题 3.3.6.  }\textsuperscript{\cite{Liu_Peng}}
+连分数部分商序列是渐进独立的.
+\par
+\textbf{证明:  }
+对任意正整数$i,j$记
+$A=\{x\in I|a_1=i\},B=\{x\in I|a_1=j\}$
+由连分数动力系统的强混合性,可知
+$$\lim\limits_{n\to \infty}\left|\gamma(A\cap\tau^{-n}B)-\gamma(A)\gamma(B)\right|=0,$$
+则$\lim\limits_{n\to \infty}\gamma(A\cap\tau^{-n}B)=\gamma(A)\gamma(B).$
+即
+\begin{align*}
+\lim\limits_{n\to \infty}\gamma\{x\in I|a_1(x)=i,a_{n+1}(x)=j\}&=\gamma(\{x\in I|a_1=i\})\gamma(\{x\in I|a_1=j\})\\
+&=\gamma(\{x\in I|a_1=i\})\gamma(\{x\in I|a_{n+1}=j\}).
+\end{align*}
+这就说明了连分数部分商序列的渐近独立性.\qed
+
+\sectionbreak

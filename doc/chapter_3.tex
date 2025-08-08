@@ -1,0 +1,114 @@
+\section{连分数动力系统的遍历性}
+\subsection{遍历性简介}
+\textbf{定义 4.1.1.  }
+记$(X,\mathcal{B},\mu,T)$是一个保测系统.若对满足$T^{-1}A=A$的任意可测集$A\in\mathcal{B}$都有$\mu(A)=0$或$1$,则称保测变换$T:X\to X$为遍历的, $(X,\mathcal{B},\mu,T)$为遍历动力系统.
+\par
+遍历性有以下等价条件
+\begin{enumerate}
+    \item 保测变换$T$是遍历的;
+    \item 若可测集$A\in\mathcal{B}$满足$\mu(T^{-1}A\Delta A)=0$,则$\mu(A)=0$或$1$;
+    \item 若$A\in\mathcal{B}$且$\mu(A)>0$,则$\mu(\bigcup\limits_{i=1}^{\infty}T^{-i}A)=1$;
+    \item 若$A,B\in\mathcal{B}$且$\mu(A)>0,\mu(B)>0$,则存在$n$使得$\mu(T^{-n}A\cup B)>0$.
+\end{enumerate}\par
+条件等价性的证明可见参考文献\cite{Ergodic_Sun,Ergodic_theory}.\par
+对遍历动力系统,考虑轨道$\{T^{n}x\}_{x\in X}$,有符合直觉的下述性质.\par
+\textbf{命题 4.1.1.  }\textsuperscript{\cite{Ergodic_Sun,Ergodic_theory}}
+若$X$是紧致度量空间, $\mathcal{B}$为Borel  $\sigma$代数, $\mu$为Borel概率测度,且任意非空开集$A\in\mathcal{B}$都有$\mu(A)>0$,并且$T:X\to X$是连续、保测、遍历的,则几乎处处的轨道在$X$中稠密.
+即
+$$\mu(\{x\in X|\overline{\{T^{n}(x)|n\in\mathbb{N}\}}=X\})=1.$$
+\par
+\textbf{证明:  }
+由$X$是紧致度量空间,可知其存在可数拓扑基,记为$\{B_n\}_{n\in\mathbb{N}^+}$.有
+$$\overline{\{T^{n}(x)|n\in\mathbb{N}\}}=X\iff x\in\bigcap_{n=1}^{\infty}\bigcup_{k=0}^{\infty}T^{-k}B_n.$$
+由$T^{-1}\bigcup_{k=1}^{\infty}T^{-k}B_n=\bigcup_{k=1}^{\infty}T^{-k}B_n\subset\bigcup_{k=0}^{\infty}T^{-k}B_n$,且$T$是保测的,所以
+$$\mu\left(T^{-1}\bigcup_{k=1}^{\infty}T^{-k}B_n\right)=\mu\left(\bigcup_{k=1}^{\infty}T^{-k}B_n\right),$$
+从而有
+$$\mu\left(\left(T^{-1}\bigcup_{k=1}^{\infty}T^{-k}B_n\right)\Delta \left(\bigcup_{k=1}^{\infty}T^{-k}B_n\right)\right)=0.$$
+由$T$是遍历的,由保测性的等价条件2,可知$\mu\left(\left(\bigcup_{k=1}^{\infty}T^{-k}B_n\right)\right)=0$或$1$.\par
+由$T$是连续的,可知$\bigcup_{k=1}^{\infty}T^{-k}B_n$是非空开集,从而$\mu(\bigcup_{k=1}^{\infty}T^{-k}B_n)>0$,故$\mu(\bigcup_{k=1}^{\infty}T^{-k}B_n)=1$.由此可得
+$$\mu\left(\bigcap_{n=1}^{\infty}\bigcup_{k=0}^{\infty}T^{-k}B_n\right)=1.$$
+即几乎处处的轨道在$X$中稠密.\qed
+\par
+下面将介绍\textbf{Birkhoff遍历定理},它是遍历理论的基本定理.\par
+\textbf{命题 4.1.2.  }\textsuperscript{\cite{Ergodic_Sun,Ergodic_theory}}\textbf{(Birkhoff遍历定理,保测情形).  }
+若$(X,\mathcal{B},\mu,T)$是保测系统, $f\in L^1$,则有:
+\begin{enumerate}
+    \item $\dfrac{1}{n}\sum\limits_{i=0}^{n-1}f\circ T^{i}$几乎处处收敛于$L^1$函数$\bar f$.即
+    $$\lim_{n\to\infty}\frac{1}{n}\sum\limits_{i=0}^{n-1}f(T^{i}(x))=\bar f(x),\quad \mathrm{a.e.}\quad x\in X.$$
+    \item $\bar f(x)\circ T=\bar f(x),\quad \mathrm{a.e.}\quad x\in X.$,且有
+    $$\int f\mathrm{d}m =\int \bar f\mathrm{d}m.$$
+\end{enumerate}
+\par
+\textbf{命题 4.1.3.  }\textsuperscript{\cite{Ergodic_Sun,Ergodic_theory}}\textbf{(Birkhoff遍历定理,遍历情形).  }
+若$(X,\mathcal{B},\mu,T)$是遍历系统,$f\in L^1$,则有:
+\begin{equation}\label{Birkhoff1}
+\lim_{n\to\infty}\frac{1}{n}\sum\limits_{i=0}^{n-1}f(T^{i}(x))=\int f\mathrm{d}m,\quad \mathrm{a.e.}\quad x\in X.
+\end{equation}\par
+对可测集$A\in\mathcal{B}$,由\textbf{Birkhoff遍历定理},并取$f=\mathcal{X}_A$为$A$的特征函数,则式(\ref{Birkhoff1})的左边为$x$的轨道进入$A$的频率之极限,右边为$\mu(A)$.即
+\begin{equation}\label{Birkhoff2}
+\mu\left(\left\{x\in X\middle|\lim_{n\to\infty}\frac{1}{n}\sum_{i=1}^{n-1}\mathcal{X}_A\circ T^{i}=\mu(A)\right\}\right)=1.
+\end{equation}
+\subsection{连分数动力系统的遍历性}
+在本节中,我们将证明混合性与遍历性的关系,从而证明连分数动力系统的遍历性.\par
+\textbf{命题 4.2.1.  }\textsuperscript{\cite{Ergodicity_and_mixing}}
+强混合性蕴含弱混合性蕴含遍历性.
+\par
+\textbf{证明:  }
+前半部分是显然的,下面证明后半部分:设$(X,\mathcal{B},\mu,T)$是弱混合的系统.若$A\in\mathcal{B}$满足$T^{-1}A=A$.则$T^{-n}(A)=A$,结合系统的弱混合性,可知,
+$$\lim_{n\to\infty}{\frac{1}{n}}\sum_{i=0}^{n-1}|\mu(T^{-i}A\cap A)-\mu(A)\mu(A)|=0.$$
+从而
+$$\lim_{n\to\infty}{\frac{1}{n}}\sum_{i=0}^{n-1}|\mu(A)-\mu(A)\mu(A)|=0,$$
+$$|\mu(A)-\mu(A)\mu(A)|=0.$$
+也就是说$\mu(A)=0$或$1$.根据定义,可以知道$(X,\mathcal{B},\mu,T)$是遍历的.\qed
+\par
+由此,结合上一章所证的连分数动力系统的强混合性,我们可以直接得到:\par
+\textbf{推论 4.2.2.  }\textsuperscript{\cite{Ergodic_theory,Ergodicity_and_mixing}}
+连分数动力系统$(I,\mathcal{B}_I,\tau,\gamma)$是遍历的.
+\par
+根据连分数动力系统的遍历性,我们可以得到下面结论:\par
+\textbf{命题 4.2.3.  }\textsuperscript{\cite{Ergodic_theory}}
+$\forall i\in\mathbb{N^+}$,连分数部分商等于$i$的频率之极限在$I$上几乎处处存在且相等.
+\par
+\textbf{证明:  }
+在(\ref{Birkhoff2})中,取$A=\{x\in I|a_1(x)=i\}=(\dfrac{1}{i+1},\dfrac{1}{i}]$,得$\gamma(A)=\dfrac{1}{\ln2}\ln\dfrac{(i+1)^2}{i(i+2)}$.
+代回(\ref{Birkhoff2}),得到
+$$\lim\limits_{n\to\infty}\frac{card\{k|a_k=i,1\leqslant k\leqslant n\}}{n}=\frac{1}{\ln2}\ln\dfrac{(i+1)^2}{i(i+2)},\quad\mathrm{a.e.}\quad x\in I.$$
+故连分数部分商等于$i$的频率之极限在$I$上几乎处处存在且相等.\qed
+\par
+实际上,由此还可以得到
+$$\lim\limits_{n\to\infty}\frac{card\{k|a_k\leqslant i,1\leqslant k\leqslant n\}}{n}=\sum_{j=1}^{i}\frac{1}{\ln2}\ln\dfrac{(j+1)^2}{j(j+2)},\quad\mathrm{a.e.}\quad x\in I.$$
+考虑正项级数
+$\sum\limits_{j=1}^{\infty}\dfrac{1}{\ln2}\ln\dfrac{(j+1)^2}{j(j+2)}=1$,从而可知连分数部分商有界的数构成一个零测集,这就是在第二章中没有给出证明的\textbf{命题2.2.5}.\par
+\textbf{命题 4.2.4.  }\textsuperscript{\cite{Ergodic_theory}}
+连分数部分商的几何平均数之极限在$I$上几乎处处存在且相等.
+\par
+\textbf{证明:  }
+在\textbf{Birkhoff遍历定理}中取
+$$f(x) =\ln a_1(x),$$
+即有
+$$\lim\limits_{n\to\infty}\sqrt[n]{(a_1(x)a_2(x)\cdots a_n(x))}=\prod\limits_{i=1}^\infty\left(\frac{(i+1)^2}{i(i+2)}\right)^{\frac{\ln{i}}{\ln{2}}},\quad\mathrm{a.e.}\quad x\in I.$$
+故连分数部分商的几何平均数之极限在$I$上几乎处处存在且相等.\qed
+\par
+\textbf{命题 4.2.5.  }\textsuperscript{\cite{Ergodic_theory}}
+连分数部分商的算术平均数之极限在$I$上几乎处处不存在.
+\par
+\textbf{证明:  }
+注意到,如果取$f(x)=a_1(x)$,则有
+$$\int\limits_{I}f\mathrm{d}x=\sum_{i=2}^{\infty}\frac{1}{i},$$发散,不满足\textbf{Birkhoff遍历定理}的条件.下面取$f_n(x)=a_1(x)\mathcal{X}_{(\frac{1}{n+1},1)},n\in\mathbb{N^+}$.\par
+一方面,
+$$\int\limits_{I}f_n\mathrm{d}x=\sum_{i=2}^{n+1}\frac{1}{i}.$$
+另一方面,
+$$f_n(T^{m}(x))=\left\{
+\begin{aligned}
+&a_{m+1}(x) \quad &&a_{m+1}\leqslant n\\
+&0\quad &&a_{m+1}> n
+\end{aligned}
+\right
+.$$
+由\textbf{Birkhoff遍历定理}可知,$\forall n\in\mathbb{N^+}$
+$$\lim_{m\to\infty}\frac{1}{m}\sum\limits_{i=0}^{n-1}f_n(T^{i}(x))=\int f_n\mathrm{d}x,\quad \mathrm{a.e.}\quad x\in I.$$
+考虑$n\to\infty$的过程,即可证明
+$$\lim\frac{a_1(x)+a_2(x)+\cdots+a_n(x)}{n}=\infty\quad\mathrm{a.e.}\quad x\in I.$$
+故连分数部分商的算术平均数之极限在$I$上几乎处处不存在.\qed
+\par
+\sectionbreak
