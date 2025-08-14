@@ -17,12 +17,12 @@ $$\frac{p_n}{q_n}=\frac{P(a_0,a_1,\cdots ,a_n)}{Q(a_0,a_1,\cdots ,a_n)}.$$\par
 上式也给出了有限连分数的值.而对无限连分数,我们需要考虑它的收敛性,为此,对收敛因子的研究是重要的.\par
 \textbf{命题 2.1.1.  }\textsuperscript{\cite{Khinchin}}
 $\forall k\geqslant2$都有
-    \begin{equation}\label{rfc}
-        \begin{aligned}
-        p_k=a_kp_{k-1}+p_{k-2},\\
+\begin{equation}\label{rfc}
+    \begin{aligned}
+        p_k=a_kp_{k-1}+p_{k-2}, \\
         q_k=a_kq_{k-1}+q_{k-2}.
-        \end{aligned}
-    \end{equation}
+    \end{aligned}
+\end{equation}
 若我们约定$p_{-1}=1,q_{-1}=0$则\textbf{命题 2.1.1}还将对$k=1$成立.
 \par
 \textbf{证明:  }
@@ -30,23 +30,23 @@ $\forall k\geqslant2$都有
 记$[a_1;a_2,\cdots,a_n]$的$r$阶收敛因子为$[a_1;a_2,\ldots,a_r]=\dfrac{p_r^{'}}{q_r^{'}},$则
 $$[a_0;a_1,\cdots,a_n]=a_0+\dfrac{q_{n-1}^{'}}{p_{n-1}^{'}}.$$
 即有
-    \begin{align*}
-    p_n&=a_0p'_{n-1}+q'_{n-1},\\
-    q_n&=p'_{n-1}.
-    \end{align*}
+\begin{align*}
+    p_n & =a_0p'_{n-1}+q'_{n-1}, \\
+    q_n & =p'_{n-1}.
+\end{align*}
 \par
 将归纳假设用于$[a_1;a_2,\cdots,a_n]$的收敛因子,有
-    \begin{align*}
-    p'_{n-1}=a_np'_{n-2}+p'_{n-3},\\
+\begin{align*}
+    p'_{n-1}=a_np'_{n-2}+p'_{n-3}, \\
     q'_{n-1}=a_nq'_{n-2}+q'_{n-3},
-    \end{align*}
+\end{align*}
 从而有
-    \begin{align*}
-    p_n&=a_0(a_np'_{n-2}+p'_{n-3})+(a_nq'_{n-2}+q'_{n-3}) \\
-    &=a_n(a_0p'_{n-2}+q'_{n-2})+(a_0p'_{n-3}+q'_{n-3}) \\
-    &=a_np_{n-1}+p_{n-2},\\
-    q_n&=a_np'_{n-2}+p'_{n-3}=a_nq_{n-1}+q_{n-2}.
-    \end{align*}
+\begin{align*}
+    p_n & =a_0(a_np'_{n-2}+p'_{n-3})+(a_nq'_{n-2}+q'_{n-3}) \\
+        & =a_n(a_0p'_{n-2}+q'_{n-2})+(a_0p'_{n-3}+q'_{n-3}) \\
+        & =a_np_{n-1}+p_{n-2},                              \\
+    q_n & =a_np'_{n-2}+p'_{n-3}=a_nq_{n-1}+q_{n-2}.
+\end{align*}
 由归纳法知命题得证.\qed
 \par
 \textbf{推论 2.1.2.  }\textsuperscript{\cite{Khinchin}}
@@ -68,7 +68,7 @@ $$\frac{p_{k-2}}{q_{k-2}}-\frac{p_k}{q_k}=\frac{(-1)^{k-1}a_k}{q_kq_{k-2}}.$$
 \textbf{命题 2.1.5.  }\textsuperscript{\cite{Khinchin}}\textbf{(连分数收敛性的判定定理).  }
 无限连分数$[a_0;a_1,a_2,\cdots,a_n,\cdots]$收敛的充分必要条件是级数
 \begin{equation}\label{series}
-\sum_{n=1}^{\infty}a_n
+    \sum_{n=1}^{\infty}a_n
 \end{equation}
 发散.
 \par
@@ -92,7 +92,7 @@ $$q_k<\frac{q_s}{\left(1-a_k\right)\left(1-a_{k_1}\right)\ldots\left(1-a_{k_m}\r
 $$\prod_{n=k_0}^{\infty}\left(1-a_n\right)$$
 有确定的正值,记为$\xi$,并且显然有
 \begin{equation}\label{repeated}
-(1-a_k)(1-a_{k_1})\cdots(1-a_{k_m})\geqslant \prod_{n=k_0}^{\infty}(1-a_n)=\lambda.   
+    (1-a_k)(1-a_{k_1})\cdots(1-a_{k_m})\geqslant \prod_{n=k_0}^{\infty}(1-a_n)=\lambda.
 \end{equation}
 我们再记$q_0,q_1,\cdots,q_{k_0-1}$中最大的为$M$.
 由(\ref{repeated})可知, $\forall k\geqslant k_0$,有
@@ -104,8 +104,8 @@ $$q_{k+1}q_k<\frac{M^2}{\lambda^2}<\infty.$$
 $$q_k\geqslant q_{k-2}+ma_k,\quad \forall k\geqslant 2,$$
 从而
 \begin{align*}
-q_{2k} &\geqslant q_0+c\sum_{n=1}^k a_{2n},\\
-q_{2k+1} &\geqslant q_1+c\sum_{n=1}^k a_{2n+1}.
+    q_{2k}   & \geqslant q_0+c\sum_{n=1}^k a_{2n},   \\
+    q_{2k+1} & \geqslant q_1+c\sum_{n=1}^k a_{2n+1}.
 \end{align*}
 上面两式相加可得
 $$q_{2k}+q_{2k+1}>q_{0}+q_{1}+c\sum_{i=1}^{2k+1}a_{n},$$
@@ -136,7 +136,7 @@ $$q_k=a_k q_{k-1}+q_{k-2}\geqslant q_{k-1}+q_{k-2}\geqslant2q_{k-2}.$$
 \par
 结合(\ref{rfc}),可以得到下面估计
 \begin{equation}\label{klength}
-\left|\frac{p_n}{q_n}-\frac{p_n+p_{n-1}}{q_n+q_{n-1}}\right|=\frac{1}{q_n(q_n+q_{n-1})}\leqslant\frac{1}{2^{n-1}}.
+    \left|\frac{p_n}{q_n}-\frac{p_n+p_{n-1}}{q_n+q_{n-1}}\right|=\frac{1}{q_n(q_n+q_{n-1})}\leqslant\frac{1}{2^{n-1}}.
 \end{equation}
 这个式子在以后会用到.
 \subsection{连分数度量理论简介}
@@ -188,8 +188,8 @@ $$\frac{p_k+p_{k-1}}{q_k+q_{k-1}}\quad\text{和}\quad\frac{p_k}{q_k}.$$
 \par
 对一般的$E=\{x\in [0,1)|a_{n_1}=i_1,a_{n_2}=i_2,\cdots,a_{n_k}=i_k\}$,有递推关系:
 \begin{align*}
-\sum_{i_{\ell}=1}^{\infty}&\{x\in [0,1)|a_{n_1}=i_1,\cdots,a_{n_{\ell-1}}=i_{\ell-1},a_{n_{\ell}}=i_{\ell},a_{n_{\ell+1}}=i_{\ell+1},\cdots,a_{n_k}=i_k\}\\
-&=\{x\in [0,1)|a_{n_1}=i_1,\cdots,a_{n_{\ell-1}}=i_{\ell-1},a_{n_{\ell+1}}=i_{\ell+1},\cdots,a_{n_k}=i_k\}
+    \sum_{i_{\ell}=1}^{\infty} & \{x\in [0,1)|a_{n_1}=i_1,\cdots,a_{n_{\ell-1}}=i_{\ell-1},a_{n_{\ell}}=i_{\ell},a_{n_{\ell+1}}=i_{\ell+1},\cdots,a_{n_k}=i_k\} \\
+                               & =\{x\in [0,1)|a_{n_1}=i_1,\cdots,a_{n_{\ell-1}}=i_{\ell-1},a_{n_{\ell+1}}=i_{\ell+1},\cdots,a_{n_k}=i_k\}
 \end{align*}
 成立,其中对集合的$\sum$表示集合的无交并.\par
 为呼应本节开头的内容,并举例说明连分数的度量性质在研究连分数的算数性质上的重要性,我们不加证明地介绍下面的两个性质并结束这一节.\par
@@ -200,7 +200,7 @@ $$\frac{p_k+p_{k-1}}{q_k+q_{k-1}}\quad\text{和}\quad\frac{p_k}{q_k}.$$
 \textbf{命题 2.2.7.  }\textsuperscript{\cite{Khinchin}}
 设$f$是定义在正半轴上的连续函数,且$xf(x)$不递增,则当积分
 $$
-\int\limits_{c}^{\infty}f\left(x\right)dx
+    \int\limits_{c}^{\infty}f\left(x\right)dx
 $$
 对某个正数$c$发散时,不等式
 $$\left|\alpha-\frac{p}{q}\right|<\frac{f(q)}{q}$$
@@ -212,17 +212,17 @@ $$\left|\alpha-\frac{p}{q}\right|<\frac{f(q)}{q}$$
 \textbf{定义 2.3.1.  }
 记$I=[0,1)$, $\mathcal{B}_I$为$I$的Borel $\sigma$代数,定义Gauss变换$\tau:I\to I:$
 $$
-\tau\left(x\right)=\left\{
-\begin{array}{cc}
-x^{-1}-\left\lfloor x^{-1}\right\rfloor&\text{当}x\neq0,\\
-0&\text{当}x=0.\end{array}\right.
+    \tau\left(x\right)=\left\{
+    \begin{array}{cc}
+        x^{-1}-\left\lfloor x^{-1}\right\rfloor & \text{当}x\neq0, \\
+        0                                       & \text{当}x=0.\end{array}\right.
 $$
 \par
 可以知道, $I$中实数和其连分数部分商的关系为
 $$a_1=a_1(x)=\lfloor1/x\rfloor,\quad a_n=a_n(x)=\lfloor1/\tau^{n-1}(x)\rfloor,$$
 以及
 \begin{equation}\label{tauandinquo}
-a_n\left(x\right)=a_1\left(\tau^{n-1}\left(x\right)\right).
+    a_n\left(x\right)=a_1\left(\tau^{n-1}\left(x\right)\right).
 \end{equation}
 (其中,定义$a_1(0)=\infty$.)\par
 历史上, Gauss问题是连分数度量理论中第一个问题,其内容是:估计误差
@@ -239,7 +239,7 @@ Gauss变换$\tau$是保Gauss测度$\gamma$的而不保持Lebesgue测度$\lambda$
 \textbf{证明:  }
 前半部分,即证
 \begin{equation}\label{Gausspreserved}
-\gamma\left(\tau^{-1}(A)\right)=\gamma(A),\quad \forall A\in\mathcal{B}_I.
+    \gamma\left(\tau^{-1}(A)\right)=\gamma(A),\quad \forall A\in\mathcal{B}_I.
 \end{equation}
 这里只对$A=[0,u)$验证(\ref{Gausspreserved}).至于从$A=[0,u)$的情况过渡到$\forall A\in\mathcal{B}_I$的情况,之后会进行介绍.\par
 考虑$A$
@@ -251,10 +251,10 @@ $$\int_0^u\frac{\mathrm{d}x}{x+1}=\sum\limits_{i\in\mathbf{N}_+}\int_{1/(u+i)}^{
 \par
 后半部分,为证Gauss变换$\tau$不保持Lebesgue测度$\lambda$,只需找到一个反例,取$A=(\dfrac{1}{2},1)$,有
 $$
-\begin{aligned}
-\lambda\left(\tau^{-1}\left(A\right)\right)& =\sum_{i\in\mathbf{N}_{+}}\left(\frac{1}{i+1/2}-\frac{1}{i+1}\right)=2\sum_{i\in\mathbf{N}_{+}}\left(\frac{1}{2i+1}-\frac{1}{2i+2}\right)  \\
-&=2\left(\log2-1+\frac12\right)=2\log2-1.
-\end{aligned}
+    \begin{aligned}
+        \lambda\left(\tau^{-1}\left(A\right)\right) & =\sum_{i\in\mathbf{N}_{+}}\left(\frac{1}{i+1/2}-\frac{1}{i+1}\right)=2\sum_{i\in\mathbf{N}_{+}}\left(\frac{1}{2i+1}-\frac{1}{2i+2}\right) \\
+                                                    & =2\left(\log2-1+\frac12\right)=2\log2-1.
+    \end{aligned}
 $$
 而
 $$\lambda(A)=\frac{1}{2}\neq2\log2-1=\lambda\left(\tau^{-1}\left(A\right)\right).$$
@@ -283,7 +283,7 @@ $$\bar{\tau}^{-n}\left(\omega,\theta\right)=\left([a_{n}\left(\theta\right),\cdo
 $$\bar{a}_{\ell+1}\left(\omega,\theta\right)=\bar{a}_1\left(\bar{\tau}^\ell\left(\omega,\theta\right)\right).$$
 两者之间的关系是
 \begin{equation}\label{taubartauan}
-\bar{a}_{0}\left(\omega,\theta\right)=a_{1}\left(\theta\right),\bar{a}_{n}\left(\omega,\theta\right)=a_{n}\left(\omega\right),\bar{a}_{-n}\left(\omega,\theta\right)=a_{n+1}\left(\theta\right),\forall n\in\mathbb{N}.
+    \bar{a}_{0}\left(\omega,\theta\right)=a_{1}\left(\theta\right),\bar{a}_{n}\left(\omega,\theta\right)=a_{n}\left(\omega\right),\bar{a}_{-n}\left(\omega,\theta\right)=a_{n+1}\left(\theta\right),\forall n\in\mathbb{N}.
 \end{equation}
 这一点在之后会用到.\par
 $\bar\tau$也引出一种Gauss测度$\bar\gamma:\mathcal{B}_{\Omega^2}\to[0,1]$

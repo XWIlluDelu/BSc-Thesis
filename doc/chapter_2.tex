@@ -40,9 +40,9 @@ $$\mu_1(T^{-1}(A_2))=\mu_2(A_2).$$
 记$X$为一个集合,$\mathcal{C}$是$X$的一个子集类.若有:
 \begin{enumerate}
     \item $\mathcal{C}$对单调增集合列之并封闭,即
-    $$\text{若}E_{1}\subset E_{2}\subset\cdots,E_{i}\in{\mathcal C}\text{,则}\bigcup_{i=1}^{\infty}E_{i}\in{\mathcal C};$$
+          $$\text{若}E_{1}\subset E_{2}\subset\cdots,E_{i}\in{\mathcal C}\text{,则}\bigcup_{i=1}^{\infty}E_{i}\in{\mathcal C};$$
     \item $\mathcal{C}$对单调减集合列之交封闭,即
-    $$\text{若}F_{1}\supset F_{2}\supset\cdots,F_{i}\in{\mathcal C}\text{,则}\bigcap_{i=1}^{\infty}F_{i}\in{\mathcal C}.$$
+          $$\text{若}F_{1}\supset F_{2}\supset\cdots,F_{i}\in{\mathcal C}\text{,则}\bigcap_{i=1}^{\infty}F_{i}\in{\mathcal C}.$$
 \end{enumerate}
 则称$\mathcal{C}$为单调类.
 \par
@@ -54,7 +54,7 @@ $$\mu_1(T^{-1}(A_2))=\mu_2(A_2).$$
 \textbf{引理 3.1.1.  }\textsuperscript{\cite{Ergodic_Sun,Ergodic_theory}}
 由半代数$\mathcal{S}$生成的代数为:
 \begin{equation}\label{genealge}
-{\mathcal A}({\mathcal S})=\left\{E=\sum\limits_{i=1}^{n}E_{i}|E_{i}\in{\mathcal S},i=1,2,\cdots,n,n\in\mathbb{N^{+}}\right\}.
+    {\mathcal A}({\mathcal S})=\left\{E=\sum\limits_{i=1}^{n}E_{i}|E_{i}\in{\mathcal S},i=1,2,\cdots,n,n\in\mathbb{N^{+}}\right\}.
 \end{equation}
 \par
 \textbf{证明:  }
@@ -104,12 +104,12 @@ $$\mu(T^{-1}(\sum\limits_{i=1}^n A_i))=\mu(\sum\limits_{i=1}^n T^{-1}(A_i))=\sum
 知$\mu(T^{-1}(A))=\mu(A)$在$\mathcal{A}(\mathcal{S})$上也成立.\par
 记$\{B_n\}_{n\in\mathbb{N}^+}$是满足$\mu(T^{-1}(B_i))=\mu(B_i)$的单调增集合列,由于
 $$\mu\left(T^{-1}\bigcup_{i=1}^{n}B_{i}\right)=\mu\left(T^{-1}B_{n}\right)=
-\mu\left(B_{n}\right)=\mu\left(\bigcup_{i=1}^{n}B_{i}\right).$$
+    \mu\left(B_{n}\right)=\mu\left(\bigcup_{i=1}^{n}B_{i}\right).$$
 并且$\mu\left(\bigcup\limits_{i=1}^{n}B_{i}\right),\mu\left(T^{-1}\bigcup\limits_{i=1}^{n}B_{i}\right)$为单调有界数列,是收敛的,从而
 \begin{align*}
-    \lim_{n\to\infty}\mu\left(\bigcup\limits_{i=1}^{n}B_{i}\right)&= \mu\left(\bigcup\limits_{i=1}^{\infty}B_{i}\right),\\
-    \lim_{n\to\infty}\mu\left(T^{-1}\bigcup\limits_{i=1}^{n}B_{i}\right)&= \mu\left(T^{-1}\bigcup\limits_{i=1}^{\infty}B_{i}\right).\\
-    \mu\left(T^{-1}\bigcup_{i=1}^{\infty}B_{i}\right)&=\mu\left(\bigcup_{i=1}^{\infty}B_{i}\right).
+    \lim_{n\to\infty}\mu\left(\bigcup\limits_{i=1}^{n}B_{i}\right)       & = \mu\left(\bigcup\limits_{i=1}^{\infty}B_{i}\right),       \\
+    \lim_{n\to\infty}\mu\left(T^{-1}\bigcup\limits_{i=1}^{n}B_{i}\right) & = \mu\left(T^{-1}\bigcup\limits_{i=1}^{\infty}B_{i}\right). \\
+    \mu\left(T^{-1}\bigcup_{i=1}^{\infty}B_{i}\right)                    & =\mu\left(\bigcup_{i=1}^{\infty}B_{i}\right).
 \end{align*}
 可知满足$\mu(T^{-1}(A))=\mu(A)$的子集类是包含$\mathcal{A}(\mathcal{S})$的单调类.结合\textbf{引理 3.1.2}知,满足$\mu(T^{-1}(A))=\mu(A)$的子集类是$\mathcal{B}(\mathcal{A}(\mathcal{S}))=\mathcal{B}$.\qed
 \par
@@ -145,15 +145,15 @@ $$\alpha(\mathcal{A},\mathcal{B})\leqslant\phi(\mathcal{A},\mathcal{B})\leqslant
 记$\{f_n\}_{n\in\mathbb{N}}$是定义在$[0,1]$上的一列实函数,并且满足下面三个条件:
 \begin{enumerate}
     \item 递推条件:
-    \begin{equation}\label{recur}
-        f_{n+1}(x)=\sum\limits_{k=1}^{\infty}\dfrac{1}{(k+x)^{2}}f_{n}\left(\dfrac{1}{k+x}\right);
-    \end{equation}
+          \begin{equation}\label{recur}
+              f_{n+1}(x)=\sum\limits_{k=1}^{\infty}\dfrac{1}{(k+x)^{2}}f_{n}\left(\dfrac{1}{k+x}\right);
+          \end{equation}
     \item 存在正数$M$,使得$0<f_0(x)<M$;
     \item 存在正数$m$,使得$|f_0'(x)|<m$.
 \end{enumerate}
 则存在取决于$M,m$的正数$A$与正的常数$\lambda$成立
 \begin{equation}\label{Kuzmin}
-f_{n}\left(x\right)=\frac{a}{1+x}+\theta A e^{-\lambda \sqrt{n}},
+    f_{n}\left(x\right)=\frac{a}{1+x}+\theta A e^{-\lambda \sqrt{n}},
 \end{equation}
 $$a=\frac{1}{\ln2}\int_{0}^{1}f_{0}(z)d z,\quad|\theta|<1.$$
 \par
@@ -161,55 +161,55 @@ $$a=\frac{1}{\ln2}\int_{0}^{1}f_{0}(z)d z,\quad|\theta|<1.$$
 该定理的证明较长,在这里我们仅简要叙述主要步骤.先介绍在题设条件下成立的下面四个引理:\par
 \textbf{引理 1.  }\textsuperscript{\cite{Iosifescu}}
 \begin{equation}\label{lemma1}
-f_{n}\left(x\right)=\sum^{\left(n\right)}f_{0}\left(\frac{p_{n}+x p_{n-1}}{q_{n}+x q_{n-1}}\right)\frac{1}{\left(q_{n}+x q_{n-1}\right)^{2}}
+    f_{n}\left(x\right)=\sum^{\left(n\right)}f_{0}\left(\frac{p_{n}+x p_{n-1}}{q_{n}+x q_{n-1}}\right)\frac{1}{\left(q_{n}+x q_{n-1}\right)^{2}}
 \end{equation}
 对任意$n\geqslant 0$成立.其中, $\dfrac{p_{n}+xp_{n-1}}{q_{n}+xq_{n-1}}$落在以$\dfrac{p_{n}}{q_{n}}$和$\dfrac{p_{n}+p_{n-1}}{q_{n}+q_{n-1}}$为端点的$n$阶柱集内,求和是对所有$n$阶柱集求和.\par
 \par
 \textbf{引理 2.  }\textsuperscript{\cite{Iosifescu}}
 \begin{equation}\label{lemma2}
-\left|f_{n}^{'}(x)\right|<\frac{m}{2^{n-3}}+4M
+    \left|f_{n}^{'}(x)\right|<\frac{m}{2^{n-3}}+4M
 \end{equation}
 对任意$n\geqslant0$成立.\par
 \par
 \textbf{引理 3.  }\textsuperscript{\cite{Iosifescu}}
 若
 \begin{equation}\label{lemma3eq1}
-\frac{t}{1+x}<f_{n}(x)<\frac{T}{1+x},
+    \frac{t}{1+x}<f_{n}(x)<\frac{T}{1+x},
 \end{equation}
 则
 \begin{equation}\label{lemma3eq2}
-\frac{t}{1+x}<f_{n+1}(x)<\frac{T}{1+x},
+    \frac{t}{1+x}<f_{n+1}(x)<\frac{T}{1+x},
 \end{equation}
 \par
 \textbf{引理 4.  }\textsuperscript{\cite{Iosifescu}}
 \begin{equation}\label{lemma4}
-\int\limits_{0}^{1}f_{n}(z)dz=\int\limits_{0}^{1}f_{0}(z)dz
+    \int\limits_{0}^{1}f_{n}(z)dz=\int\limits_{0}^{1}f_{0}(z)dz
 \end{equation}
 对任意$n\geqslant0$成立.\par
 \par
 回到\textbf{Kuzmin定理}的证明,由定理条件容易知道,存在正数$g_0,G_0,m_0=m$使得
 \begin{equation}\label{Kuzmintherom1}
-\frac{g_0}{1+x}<f_0(x)<\frac{G_0}{1+x},\quad|f_0'(x)|<m_0.
+    \frac{g_0}{1+x}<f_0(x)<\frac{G_0}{1+x},\quad|f_0'(x)|<m_0.
 \end{equation}
 之后,将证明,由(\ref{Kuzmintherom1})可以推得,对充分大的$n$,存在正数$g_1,G_1,m_1$使得
 $$\frac{g_1}{1+x}<f_n(x)<\frac{G_1}{1+x},\quad|f_n'(x)|<m_1,$$
 并且若记$\delta=1-\dfrac{\ln2}{2}<1$,还有
 \begin{align*}
-    g_0<g_1<G_1<G_0,\\
+    g_0<g_1<G_1<G_0, \\
     G_1-g_1<(G_0-g_0)\delta+2^{-n+2}(m_0+G_0).
 \end{align*}
 重复这样的步骤,可以证得,对$r=1,2\cdots$,存在正数$g_r,G_r,m_r$,使得
 \begin{equation}\label{Kuzmintherom2}\begin{aligned}
-&\frac{g_r}{1+x}<f_{rn}(x)<\frac{G_r}{1+x},\quad |f_{rn}^{\prime}(x)|<n_{r}.\\
-&g_{r-1}<g_{r}<G_{r}<G_{r-1},\\
-&G_r-g_r<\delta(G_{r-1}-g_{r-1})+2^{-n+2}(m_{r-1}+G_{r-1}).
-\end{aligned}\end{equation}
+         & \frac{g_r}{1+x}<f_{rn}(x)<\frac{G_r}{1+x},\quad |f_{rn}^{\prime}(x)|<n_{r}. \\
+         & g_{r-1}<g_{r}<G_{r}<G_{r-1},                                                \\
+         & G_r-g_r<\delta(G_{r-1}-g_{r-1})+2^{-n+2}(m_{r-1}+G_{r-1}).
+    \end{aligned}\end{equation}
 由\textbf{引理 3},可以取$m_r = \dfrac{m}{2^{rn-3}} + 4M$,并且对足够大的$n$,有$m_r<5M$.
 代回(\ref{Kuzmintherom2})可得,存在常数$\lambda>0$,由$M,m$决定的$A_0>0$,使得
 $$G_n-g_n<A_0e^{-\lambda n}.$$
 记$\lim\limits_{n\to\infty}G_n=\lim\limits_{n\to\infty}g_n=a$,即有
 \begin{equation}\label{Kuzmintherom3}
-\Big|f_{n^2}(x)-\frac{a}{1+x}\Big|<A_0 e^{-\lambda n},\quad \lim_{n\to\infty} \int\limits_0^1f_{n^2}(z)dz=a\ln2.
+    \Big|f_{n^2}(x)-\frac{a}{1+x}\Big|<A_0 e^{-\lambda n},\quad \lim_{n\to\infty} \int\limits_0^1f_{n^2}(z)dz=a\ln2.
 \end{equation}
 由\textbf{引理 4},可知$a=\dfrac{1}{\ln2}\int_{0}^{1}f_0(z)\mathrm{d}z$.
 由\textbf{引理 3},以及(\ref{Kuzmintherom3}),对足够大的$n$,都有
@@ -228,7 +228,7 @@ $$m_{n+1}^{\prime}(x)=\sum_{k=1}^{\infty}\frac{1}{(k+x)^2}m_n^{\prime}\left(\fra
 $$\Big|m_n'(x)-\frac{1}{(1+x)\ln2}\Big|<\theta Ae^{-\lambda \sqrt{n}},$$
 两边积分,得
 $$\Big|m_n(x)-\frac{\ln{(1+x)}}{\ln{2}}\Big|\leqslant\int_0^1\Big|m_n'(x)-\frac{1}{(1+x)\ln2}\Big|\mathrm{d}x<\theta Ae^{-\lambda \sqrt{n}}.$$
-这就为Gauss问题给出了一个解.    
+这就为Gauss问题给出了一个解.
 
 
 \subsection{连分数动力系统的混合性}
@@ -236,7 +236,7 @@ $$\Big|m_n(x)-\frac{\ln{(1+x)}}{\ln{2}}\Big|\leqslant\int_0^1\Big|m_n'(x)-\frac{
 \textbf{引理 3.4.1.  }\textsuperscript{\cite{Liu_Peng,Mixing_lemma}}
 设$E$为$k$阶柱集$\{x\in I|a_1(x)=i_1,a_2(x)=i_2,\cdots,a_k(x)=i_k\}$.则$\forall F\in\mathcal{B}_I$,有
 \begin{equation}\label{mixinglemma1.1}
-\gamma(E\bigcap \tau^{-n-k}F)=\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}})),\quad 0\leqslant p<1.
+    \gamma(E\bigcap \tau^{-n-k}F)=\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}})),\quad 0\leqslant p<1.
 \end{equation}
 \par
 \textbf{证明:  }
@@ -247,7 +247,7 @@ $$F_n(u)=\{x\in I|\tau^{n+k}(x)<u\},$$
 $$f_n(u)=\dfrac{\gamma(E\cap F_n(u))}{\gamma(E)}.$$
 由于$\tau^{n+k}(x)=\dfrac{1}{a_{n+k+1}+\tau^{n+k+1}(x)}$,有
 \begin{equation}\label{mixinglemma1.2}
-f_{n+1}(u)=\sum_{m=1}^\infty f_{n}\left(\dfrac{1}{m}\right)-f_{n}\left(\dfrac{1}{m+u}\right).
+    f_{n+1}(u)=\sum_{m=1}^\infty f_{n}\left(\dfrac{1}{m}\right)-f_{n}\left(\dfrac{1}{m+u}\right).
 \end{equation}\par
 由于$E\cap F_0(u)=\{x\in I|a_1(x)=i_1,a_2(x)=i_2,\cdots,a_k(x)=i_k,\tau^{k}(x)<u\},$可知
 $$\gamma(E\cap F_0(u))=(-1)^k\frac{1}{\ln2}\left(\ln\left(1+\frac{p_k+up_{k-1}}{q_k+uq_{k-1}}\right)-\ln\left(1+\frac{p_k}{q_k}\right)\right)$$
@@ -262,9 +262,9 @@ $$\gamma(E)=(-1)^k\frac{1}{\ln2}\left(\ln\left(1+\frac{p_k+p_{k-1}}{q_k+q_{k-1}}
 $$|f_n'(u)-\frac{1}{(\ln 2)(1+u)}|\leqslant \theta A e^{-\lambda \sqrt{n}}.$$
 上式两边同时在可测集$F$上积分,可知\\
 \begin{align*}
-    \left|\frac{\gamma(E\cap \tau^{-n-k}F)}{\gamma(E)}-\gamma(F)\right|&=\left|\int_F f_n(u)\mathrm{d}u-\int_F \frac{1}{(\ln 2)(1+u)}\mathrm{d}u\right|\\
-    &\leqslant\int_F\left|f_n'(u)-\frac{1}{(\ln 2)(1+u)}\right|\mathrm{d}u\\
-    &\leqslant\theta A e^{-\lambda\sqrt{n}}\lambda(F)=\gamma(F)O(p^{\sqrt{n}}).
+    \left|\frac{\gamma(E\cap \tau^{-n-k}F)}{\gamma(E)}-\gamma(F)\right| & =\left|\int_F f_n(u)\mathrm{d}u-\int_F \frac{1}{(\ln 2)(1+u)}\mathrm{d}u\right| \\
+                                                                        & \leqslant\int_F\left|f_n'(u)-\frac{1}{(\ln 2)(1+u)}\right|\mathrm{d}u           \\
+                                                                        & \leqslant\theta A e^{-\lambda\sqrt{n}}\lambda(F)=\gamma(F)O(p^{\sqrt{n}}).
 \end{align*}
 上式最后一个等号用到了Gauss测度$\gamma$和Lebesgue测度$\lambda$的等价性.这也就说明了(\ref{mixinglemma1.1})成立.\qed
 \par
@@ -276,15 +276,15 @@ $$\gamma(E\bigcap \tau^{-n-k}F)=\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}})),\quad 0\le
 $$E=\left(\dfrac{p_k}{q_k},\dfrac{\bar p_k}{\bar q_k}\right)=\sum\limits_{i=1}^{\infty}E_i.$$
 由\textbf{引理 3.4.1},以及$\sum\limits_{i=1}^{\infty}\gamma(E_i\bigcap\tau^{-n-k}F),\sum\limits_{i=1}^{\infty}\gamma(E_i)$的收敛性,有
 \begin{align*}
-    \gamma(\sum\limits_{i=1}^{\infty}E_i\bigcap\tau^{-n-k}F)&=\sum\limits_{i=1}^{\infty}\gamma(E_i\bigcap\tau^{-n-k}F))\\
-    &=\sum\limits_{i=1}^{\infty}\gamma(E_i)\gamma(F)(1+O(p^{\sqrt{n}}))=\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}})).
+    \gamma(\sum\limits_{i=1}^{\infty}E_i\bigcap\tau^{-n-k}F) & =\sum\limits_{i=1}^{\infty}\gamma(E_i\bigcap\tau^{-n-k}F))                                                \\
+                                                             & =\sum\limits_{i=1}^{\infty}\gamma(E_i)\gamma(F)(1+O(p^{\sqrt{n}}))=\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}})).
 \end{align*}
 这就完成了证明.\qed
 \par
 \textbf{引理 3.4.3.}\textsuperscript{\cite{Liu_Peng,Mixing_lemma}}
 记$E$是$\mathcal{B}_I$中的任意开集,则$\forall F\in\mathcal{B}_I$,成立
 \begin{equation}\label{mixinglemma3.1}
-\gamma(E\cap T^{-n}F)=\gamma(E)\gamma(F)+\gamma(F)O(p^{\sqrt{n}}),\quad 0\leqslant p<1.
+    \gamma(E\cap T^{-n}F)=\gamma(E)\gamma(F)+\gamma(F)O(p^{\sqrt{n}}),\quad 0\leqslant p<1.
 \end{equation}
 \par
 \textbf{证明:  }
@@ -295,26 +295,26 @@ $$E_1=\left[\dfrac{p_k+p_{k-1}}{q_k+q_{k-1}},\dfrac{p_k}{q_k}\right]k\text{为�
 $$E_2=\left[\dfrac{\bar p_k+\bar p_{k-1}}{\bar q_k+\bar q_{k-1}},\dfrac{\bar p_k}{\bar q_k}\right]k\text{为奇数时,或}\left[\dfrac{\bar p_k}{\bar q_k},\dfrac{\bar p_k+\bar p_{k-1}}{\bar q_k+\bar q_{k-1}}\right]k\text{为偶数时}.$$
 其中$x\in E_1,y\in E_2$,从而$E=(a,b)\subset(E_1\bigcup E_2\bigcup E_3)$.
 \begin{align*}
-&\left|\gamma(E\cap \tau^{-n}F)-\gamma(E)\gamma(F)\right|\\
-&=\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)+\gamma(E\setminus E_0 \cap \tau^{-n}F)-\gamma(E\setminus E_0)\gamma(F)\right|\\
-&\leqslant\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)\right|+\left|\gamma(E\setminus E_0 \cap \tau^{-n}F)-\gamma(E\setminus E_0)\gamma(F)\right|\\
-&\leqslant\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)\right|+\gamma(F)(\gamma(E_1)+\gamma(E_2)).
+     & \left|\gamma(E\cap \tau^{-n}F)-\gamma(E)\gamma(F)\right|                                                                                                  \\
+     & =\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)+\gamma(E\setminus E_0 \cap \tau^{-n}F)-\gamma(E\setminus E_0)\gamma(F)\right|                      \\
+     & \leqslant\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)\right|+\left|\gamma(E\setminus E_0 \cap \tau^{-n}F)-\gamma(E\setminus E_0)\gamma(F)\right| \\
+     & \leqslant\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)\right|+\gamma(F)(\gamma(E_1)+\gamma(E_2)).
 \end{align*}
 取$k=\lfloor \dfrac{n}{2}\rfloor$,由\textbf{引理 3.4.2}得
 \begin{equation}\label{mixinglemma3.2}
-\begin{aligned}
-\left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)\right|&\leqslant\left|\gamma(E_0\cap \tau^{-(n-k)-k}(F)-\gamma(E_0)\gamma(F)\right|\\
-&=\gamma(E_0)\gamma(F)(1+O(p^{\sqrt{n-k}}))\\
-&=\gamma(E_0)\gamma(F)(1+O(p^{\sqrt{\frac{n}{2}}})).
-\end{aligned}
+    \begin{aligned}
+        \left|\gamma(E_0\cap \tau^{-n}F)-\gamma(E_0)\gamma(F)\right| & \leqslant\left|\gamma(E_0\cap \tau^{-(n-k)-k}(F)-\gamma(E_0)\gamma(F)\right| \\
+                                                                     & =\gamma(E_0)\gamma(F)(1+O(p^{\sqrt{n-k}}))                                   \\
+                                                                     & =\gamma(E_0)\gamma(F)(1+O(p^{\sqrt{\frac{n}{2}}})).
+    \end{aligned}
 \end{equation}
 注意到,对$0\leqslant p<1$有$0\leqslant p^{\sqrt{\frac{1}{2}}}<1$.故若记$\bar{p}=p^{\sqrt{\frac{1}{2}}}$则有, $O(p^{\sqrt{\frac{n}{2}}})=O(\bar{p}^{\sqrt{n}})$.为使记号简单,仍记(\ref{mixinglemma3.2})中的$O(p^{\sqrt{\frac{n}{2}}})$为$O(p^{\sqrt{n}})$.\par
 由Gauss测度$\gamma$与Lebesgue测度$\lambda$的等价性$$\gamma(E_1)+\gamma(E_2)\leqslant\frac{1}{\ln2}(\lambda(E_1)+\lambda(E_2))=O(\frac{1}{2^{k}}).$$
 并且
 \begin{align*}
-&\left|\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}}))-\gamma(E_0)\gamma(F)(1+O(p^{\sqrt{n}}))\right|\\
-&\leqslant(\gamma(E_1)+\gamma(E_2))\gamma(F)(1+O(p^{\sqrt{n}}))\\
-&=\gamma(F)O(\frac{1}{2^{k}}),
+     & \left|\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}}))-\gamma(E_0)\gamma(F)(1+O(p^{\sqrt{n}}))\right| \\
+     & \leqslant(\gamma(E_1)+\gamma(E_2))\gamma(F)(1+O(p^{\sqrt{n}}))                             \\
+     & =\gamma(F)O(\frac{1}{2^{k}}),
 \end{align*}
 从而有
 $$\left|\gamma(E\cap \tau^{-n}F)-\gamma(E)\gamma(F)\right|\leqslant\gamma(E)\gamma(F)(1+O(p^{\sqrt{n}}))+\gamma(F)O(\frac{1}{2^{k}}).$$
@@ -332,19 +332,19 @@ $$\gamma(E\cap T^{-n}F)=\gamma(E)\gamma(F)+\gamma(F)O(q^{\sqrt{n}}).$$
 由于对任意小的$\varepsilon>0$, $\mathcal{B}_I$中的可测集$A,B$,存在开集$E,F$使得$$\lambda(A\Delta E)<\frac{1}{\ln 2}\varepsilon,\quad \lambda(B\Delta F)<\frac{1}{\ln 2}2\varepsilon.$$
 此时有:
 \begin{align*}
-    |\gamma(A\bigcap T^{-n}B)-\gamma(E\bigcap T^{-n}B)|&<\varepsilon,\\
-    |\gamma(E\bigcap T^{-n}B)-\gamma(E\bigcap T^{-n}F)|&<\varepsilon,\\
-    |\gamma(E)\gamma(F)-\gamma(A)\gamma(B)|&<2\varepsilon.
+    |\gamma(A\bigcap T^{-n}B)-\gamma(E\bigcap T^{-n}B)| & <\varepsilon,  \\
+    |\gamma(E\bigcap T^{-n}B)-\gamma(E\bigcap T^{-n}F)| & <\varepsilon,  \\
+    |\gamma(E)\gamma(F)-\gamma(A)\gamma(B)|             & <2\varepsilon.
 \end{align*}
 由\textbf{引理 3.4.3},对充分大的$n$有,
 $$|\gamma(E\bigcap T^{-n}F)-\gamma(E)\gamma(F)|<\varepsilon.$$
 从而有
 \begin{align*}
-|\gamma(A\bigcap T^{-n}B)-\gamma(A)\gamma(B)|& \leqslant|\gamma(A\bigcap T^{-n}B)-\gamma(E\bigcap T^{-n}B)|\\
-&+|\gamma(E\bigcap T^{-n}A)-\gamma(E\bigcap T^{-n}F)| \\
-&+|\gamma(E\bigcap T^{-n}B)-\gamma(E)\gamma(F)| \\
-&+|\gamma(E)\gamma(F)-\gamma(A)\gamma(B)|\\
-&<5\varepsilon
+    |\gamma(A\bigcap T^{-n}B)-\gamma(A)\gamma(B)| & \leqslant|\gamma(A\bigcap T^{-n}B)-\gamma(E\bigcap T^{-n}B)| \\
+                                                  & +|\gamma(E\bigcap T^{-n}A)-\gamma(E\bigcap T^{-n}F)|         \\
+                                                  & +|\gamma(E\bigcap T^{-n}B)-\gamma(E)\gamma(F)|               \\
+                                                  & +|\gamma(E)\gamma(F)-\gamma(A)\gamma(B)|                     \\
+                                                  & <5\varepsilon
 \end{align*}
 这就证明了连分数动力系统的混合性.\qed
 \par
@@ -371,8 +371,8 @@ $$\lim\limits_{n\to \infty}\left|\gamma(A\cap\tau^{-n}B)-\gamma(A)\gamma(B)\righ
 则$\lim\limits_{n\to \infty}\gamma(A\cap\tau^{-n}B)=\gamma(A)\gamma(B).$
 即
 \begin{align*}
-\lim\limits_{n\to \infty}\gamma\{x\in I|a_1(x)=i,a_{n+1}(x)=j\}&=\gamma(\{x\in I|a_1=i\})\gamma(\{x\in I|a_1=j\})\\
-&=\gamma(\{x\in I|a_1=i\})\gamma(\{x\in I|a_{n+1}=j\}).
+    \lim\limits_{n\to \infty}\gamma\{x\in I|a_1(x)=i,a_{n+1}(x)=j\} & =\gamma(\{x\in I|a_1=i\})\gamma(\{x\in I|a_1=j\})      \\
+                                                                    & =\gamma(\{x\in I|a_1=i\})\gamma(\{x\in I|a_{n+1}=j\}).
 \end{align*}
 这就说明了连分数部分商序列的渐近独立性.\qed
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.8.7)  9 AUG 2025 00:45
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.8.7)  14 AUG 2025 21:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -890,7 +890,7 @@ Package: titling 2009/09/04 v2.1d maketitle typesetting
 \thanksmarkwidth=\skip118
 \thanksmargin=\skip119
 \droptitle=\skip120
-) (doc/info.tex) (c:\WorkSpace\HUSTthesis\build\HUSTthesis.aux (c:\WorkSpace\HUSTthesis\build\doc/introduction.aux) (c:\WorkSpace\HUSTthesis\build\doc/chapter_1.aux) (c:\WorkSpace\HUSTthesis\build\doc/chapter_2.aux) (c:\WorkSpace\HUSTthesis\build\doc/chapter_3.aux))
+) (doc/info.tex) (c:\WorkSpace\BSc-Thesis-main\build\HUSTthesis.aux (c:\WorkSpace\BSc-Thesis-main\build\doc/introduction.aux) (c:\WorkSpace\BSc-Thesis-main\build\doc/chapter_1.aux) (c:\WorkSpace\BSc-Thesis-main\build\doc/chapter_2.aux) (c:\WorkSpace\BSc-Thesis-main\build\doc/chapter_3.aux))
 \openout1 = `HUSTthesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 402.
@@ -1011,7 +1011,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count385
 Package hyperref Info: Link coloring ON on input line 402.
-(c:\WorkSpace\HUSTthesis\build\HUSTthesis.out) (c:\WorkSpace\HUSTthesis\build\HUSTthesis.out)
+(c:\WorkSpace\BSc-Thesis-main\build\HUSTthesis.out) (c:\WorkSpace\BSc-Thesis-main\build\HUSTthesis.out)
 \@outlinefile=\write3
 \openout3 = `HUSTthesis.out'.
 
@@ -1120,7 +1120,7 @@ LaTeX Font Warning: Font shape `U/wasy/m/n' in size <15.75> not available
 
 [2
 
-]) (c:\WorkSpace\HUSTthesis\build\HUSTthesis.toc
+]) (c:\WorkSpace\BSc-Thesis-main\build\HUSTthesis.toc
 
 LaTeX Font Warning: Font shape `TU/SimSun(1)/b/n' undefined
 (Font)              using `TU/SimSun(1)/m/n' instead on input line 1.
@@ -1271,7 +1271,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--264
 
 
 
-]) (c:\WorkSpace\HUSTthesis\build\HUSTthesis.bbl
+]) (c:\WorkSpace\BSc-Thesis-main\build\HUSTthesis.bbl
 Underfull \hbox (badness 1082) in paragraph at lines 19--21
 []\TU/TimesNewRoman(0)/m/n/12 Brezinski C. The long history of continued fractions and Padé approximants.
  []
@@ -1293,7 +1293,7 @@ See the caption package documentation for explanation.
 
 
 
-[33] (c:\WorkSpace\HUSTthesis\build\HUSTthesis.aux (c:\WorkSpace\HUSTthesis\build\doc/introduction.aux) (c:\WorkSpace\HUSTthesis\build\doc/chapter_1.aux) (c:\WorkSpace\HUSTthesis\build\doc/chapter_2.aux) (c:\WorkSpace\HUSTthesis\build\doc/chapter_3.aux))
+[33] (c:\WorkSpace\BSc-Thesis-main\build\HUSTthesis.aux (c:\WorkSpace\BSc-Thesis-main\build\doc/introduction.aux) (c:\WorkSpace\BSc-Thesis-main\build\doc/chapter_1.aux) (c:\WorkSpace\BSc-Thesis-main\build\doc/chapter_2.aux) (c:\WorkSpace\BSc-Thesis-main\build\doc/chapter_3.aux))
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1311,11 +1311,11 @@ Package rerunfilecheck Info: File `HUSTthesis.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  21529 strings out of 403265
- 426373 string characters out of 5461231
+ 426458 string characters out of 5461231
  874559 words of memory out of 5000000
  49568 multiletter control sequences out of 15000+600000
  647050 words of font info for 188 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,12n,111p,715b,593s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,12n,111p,719b,593s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on c:\WorkSpace\HUSTthesis\build\HUSTthesis.xdv (38 pages, 369988 bytes).
+Output written on c:\WorkSpace\BSc-Thesis-main\build\HUSTthesis.xdv (38 pages, 369988 bytes).

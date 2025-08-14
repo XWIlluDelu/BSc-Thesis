@@ -34,19 +34,19 @@ $$\mu\left(\bigcap_{n=1}^{\infty}\bigcup_{k=0}^{\infty}T^{-k}B_n\right)=1.$$
 若$(X,\mathcal{B},\mu,T)$是保测系统, $f\in L^1$,则有:
 \begin{enumerate}
     \item $\dfrac{1}{n}\sum\limits_{i=0}^{n-1}f\circ T^{i}$几乎处处收敛于$L^1$函数$\bar f$.即
-    $$\lim_{n\to\infty}\frac{1}{n}\sum\limits_{i=0}^{n-1}f(T^{i}(x))=\bar f(x),\quad \mathrm{a.e.}\quad x\in X.$$
+          $$\lim_{n\to\infty}\frac{1}{n}\sum\limits_{i=0}^{n-1}f(T^{i}(x))=\bar f(x),\quad \mathrm{a.e.}\quad x\in X.$$
     \item $\bar f(x)\circ T=\bar f(x),\quad \mathrm{a.e.}\quad x\in X.$,且有
-    $$\int f\mathrm{d}m =\int \bar f\mathrm{d}m.$$
+          $$\int f\mathrm{d}m =\int \bar f\mathrm{d}m.$$
 \end{enumerate}
 \par
 \textbf{命题 4.1.3.  }\textsuperscript{\cite{Ergodic_Sun,Ergodic_theory}}\textbf{(Birkhoff遍历定理,遍历情形).  }
 若$(X,\mathcal{B},\mu,T)$是遍历系统,$f\in L^1$,则有:
 \begin{equation}\label{Birkhoff1}
-\lim_{n\to\infty}\frac{1}{n}\sum\limits_{i=0}^{n-1}f(T^{i}(x))=\int f\mathrm{d}m,\quad \mathrm{a.e.}\quad x\in X.
+    \lim_{n\to\infty}\frac{1}{n}\sum\limits_{i=0}^{n-1}f(T^{i}(x))=\int f\mathrm{d}m,\quad \mathrm{a.e.}\quad x\in X.
 \end{equation}\par
 对可测集$A\in\mathcal{B}$,由\textbf{Birkhoff遍历定理},并取$f=\mathcal{X}_A$为$A$的特征函数,则式(\ref{Birkhoff1})的左边为$x$的轨道进入$A$的频率之极限,右边为$\mu(A)$.即
 \begin{equation}\label{Birkhoff2}
-\mu\left(\left\{x\in X\middle|\lim_{n\to\infty}\frac{1}{n}\sum_{i=1}^{n-1}\mathcal{X}_A\circ T^{i}=\mu(A)\right\}\right)=1.
+    \mu\left(\left\{x\in X\middle|\lim_{n\to\infty}\frac{1}{n}\sum_{i=1}^{n-1}\mathcal{X}_A\circ T^{i}=\mu(A)\right\}\right)=1.
 \end{equation}
 \subsection{连分数动力系统的遍历性}
 在本节中,我们将证明混合性与遍历性的关系,从而证明连分数动力系统的遍历性.\par
@@ -99,12 +99,12 @@ $$\int\limits_{I}f\mathrm{d}x=\sum_{i=2}^{\infty}\frac{1}{i},$$发散,不满足\
 $$\int\limits_{I}f_n\mathrm{d}x=\sum_{i=2}^{n+1}\frac{1}{i}.$$
 另一方面,
 $$f_n(T^{m}(x))=\left\{
-\begin{aligned}
-&a_{m+1}(x) \quad &&a_{m+1}\leqslant n\\
-&0\quad &&a_{m+1}> n
-\end{aligned}
-\right
-.$$
+    \begin{aligned}
+         & a_{m+1}(x) \quad &  & a_{m+1}\leqslant n \\
+         & 0\quad           &  & a_{m+1}> n
+    \end{aligned}
+    \right
+    .$$
 由\textbf{Birkhoff遍历定理}可知,$\forall n\in\mathbb{N^+}$
 $$\lim_{m\to\infty}\frac{1}{m}\sum\limits_{i=0}^{n-1}f_n(T^{i}(x))=\int f_n\mathrm{d}x,\quad \mathrm{a.e.}\quad x\in I.$$
 考虑$n\to\infty$的过程,即可证明
